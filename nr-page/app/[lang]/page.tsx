@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Locale, getDictionary } from './dictionaries'
+import { Locale, getDictionary } from './dictionaries.ts'
 import SwitchLang from '../components/SwitchLang'
 
 type Props = {

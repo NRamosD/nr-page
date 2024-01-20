@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import SwitchLang from '../components/SwitchLang'
 import { Locale, getDictionary } from './dictionaries'
+import NavBar from '../components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="">
       <body className={inter.className}>
-        <SwitchLang/>
+        <NavBar/>
         {children}
       </body>
     </html>
