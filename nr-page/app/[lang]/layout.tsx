@@ -31,8 +31,14 @@ export default function RootLayout({
   return (
     <html lang="">
       <body className={inter.className}>
-        <NavBar/>
+        <header className='md:w-full grid justify-center sticky top-0 bg-gradient-to-t from-transparent to-black'>
+          <NavBar/>
+        </header>
         {children}
+        <footer className=''>
+
+          <span className='w-full h-28 fixed bottom-0 bg-gradient-to-t from-black to-transparent'></span>
+        </footer>
       </body>
     </html>
   )
