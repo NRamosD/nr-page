@@ -11,7 +11,7 @@ type Props = {}
 const SwitchLang: FC<Props> = () => {
   const router = useRouter()
   const path = usePathname()
-  const [selectedLang, setSelectedLang] = useState(true)
+  const [selectedLang, setSelectedLang] = useState(false)
   const [langToChange, setLangToChange] = useState("es")
   const [insideLang, setInsideLang] = useState(false)
 
@@ -25,8 +25,10 @@ const SwitchLang: FC<Props> = () => {
 
 
   const switchLang = (lang: boolean) => {
-    lang===true?router.push("en"):router.push("es")
+    // lang===true?router.push("en"):router.push("es")
     setSelectedLang(!selectedLang)
+
+
     // let idiom:string = lang
     // selectedLang===0?setSelectedLang(1):setSelectedLang(0)
     // if(lang === "en"){
@@ -49,13 +51,22 @@ const SwitchLang: FC<Props> = () => {
       <div onClick={() => switchLang(!selectedLang)} onMouseEnter={()=>setInsideLang(true)} onMouseLeave={()=>setInsideLang(false)} 
         className={`flex justify-center transition-colors duration-500 gap-x-2 h-fit w-[20vw] px-1 text-white border-2 
         border-black hover:border-white hover:cursor-pointer`}>
-        <div className={`h-fit relative transition-all duration-500 px-2 rounded-md text-center 
+        {/* <div className={`h-fit relative transition-all duration-500 px-2 rounded-md text-center 
         ${insideLang?"translate-x-0":"translate-x-5"}`}>
           {langToChange==="es"?"EN":"ES"}
         </div>
         <Image src={langToChange==="es"?english:spanish} alt='Language image' 
         className={`w-10 h-auto transition-all duration-500 
-        ${insideLang?"translate-y-0 opacity-1":"translate-y-5 opacity-0"}`}/>
+        ${insideLang?"translate-y-0 opacity-1":"translate-y-5 opacity-0"}`}/> */}
+
+        <div className=' grid grid-cols-2 gap-2 w-full p-2 bg-blue-400 text-white'>
+          <button className='px-2 py-1 bg-black' onClick={() => switchLang('en')}>
+            English
+          </button>
+          <button className='px-2 py-1 bg-black' onClick={() => switchLang('es')}>
+            Español
+          </button>
+        </div>
       </div>
       {/* <div onClick={() => switchLang("en")} onMouseEnter={()=>setInsideLang(true)} onMouseLeave={()=>setInsideLang(false)} 
         className={`flex justify-center transition-colors duration-500 gap-x-2 h-fit w-[20vw] px-1 text-white border-2 
