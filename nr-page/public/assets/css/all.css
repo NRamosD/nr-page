@@ -1,0 +1,56 @@
+
+
+@keyframes hideElementAnim {
+    0%{
+        visibility: visible;
+        transform: translate(3em, 0);
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes showElementESAnim {
+    0%{
+        transform: translate(-3em, 0);
+        visibility: visible;
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+@keyframes showElementENAnim {
+    0%{
+        transform: translate(3em, 0);
+        visibility: visible;
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.showElementEnglish{
+    animation: showElementENAnim 1s ease-in forwards;
+}
+.showElementSpanish{
+    animation: showElementESAnim 1s ease-in forwards;
+}
+.hideElement{
+    animation: hideElementAnim 1s ease-in forwards;
+}

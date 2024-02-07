@@ -6,9 +6,10 @@ interface INavBarProps {
 
 const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
   return (
-        <nav className='w-full h-[10vh] grid grid-cols-1 justify-center fixed top-0'>
-            <ul className='w-full inline-flex gap-10 justify-center m-auto'>
-                <li className='hover:cursor-pointer'>
+    <>
+        <nav className=''>
+            <ul className=' inline-flex gap-10 md:gap-20 px-2 pt-7 pb-2 md:pt-2 md:pb-2 w-full'>
+                <li>
                     <a href='#me'>About</a>
                 </li>
                 <li>
@@ -21,10 +22,11 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
                     <a href='#me'>About</a>
                 </li>
             </ul>
-            <div className='inline-flex justify-center'>
+            <div className='w-full p-1'>
                 <SwitchLang/>
             </div>
         </nav>
+    </>
   ) ;
 };
 

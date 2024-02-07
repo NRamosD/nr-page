@@ -1,85 +1,63 @@
 'use client'
-import spanish from '@/public/img/spanish.jpg'
-import english from '@/public/img/english.webp'
+import "@/public/assets/css/all.css"
+import spanish from "@/public/assets/img/spanish.webp"
+import english from "@/public/assets/img/english.svg"
+
 import { Locale } from '@/app/[lang]/dictionaries'
 import Image from 'next/image'
 import { useRouter, usePathname } from 'next/navigation'
-import { FC, useEffect, useState } from 'react'
+import { FC, use, useEffect, useState } from 'react'
 
 type Props = {}
 
 const SwitchLang: FC<Props> = () => {
+  const [selectedLang, setSelectedLang] = useState(0)
+  const [hiddenLangTag, setHiddenLangTag] = useState(0)
   const router = useRouter()
   const path = usePathname()
-  const [selectedLang, setSelectedLang] = useState(false)
-  const [langToChange, setLangToChange] = useState("es")
-  const [insideLang, setInsideLang] = useState(false)
+  // const [selectedLang, setSelectedLang] = useState(false)
+  // const [langToChange, setLangToChange] = useState("es")
+  // const [insideLang, setInsideLang] = useState(false)
 
   useEffect(() => {
-    // switchLang()
-    langToChange?setLangToChange("es"):setLangToChange("en")
-    
-    // const lang = selectedLang?"es":"en"
-    // router.push(lang)
+    path.includes("en")?setSelectedLang(1):setSelectedLang(0)
+  }, []);
+  useEffect(() => {
+    setHiddenLangTag(-1)
+    setTimeout(() => {
+      setHiddenLangTag(selectedLang===1?1:2)
+    }, 800);
+
   }, [selectedLang]);
 
-
-  const switchLang = (lang: boolean) => {
-    // lang===true?router.push("en"):router.push("es")
-    setSelectedLang(!selectedLang)
-
-
-    // let idiom:string = lang
-    // selectedLang===0?setSelectedLang(1):setSelectedLang(0)
-    // if(lang === "en"){
-    //   // idiom = "es"
-    //   setLangToChange("es")
-    //   // router.push("es")
-    // }else{
-    //   // idiom = "en"
-    //   setLangToChange("en")
-    //   // idiom = "en"
-    //   // const origin =
-    //   // typeof window !== 'undefined' && window.location.origin
-    //   // ? window.location.href
-    //   // : '';
-    // }
+  const switchLang = (lang: Locale) => {
+    const origin =
+    // alert("path: " + path)
+    // lang==="es"?setSelectedLang(1):setSelectedLang(0)
+    router.push(lang)
   }
-
+//${hiddenLangTag==-1?"translate-x-5 opacity-0":"translate-x-0 opacity-1"} ${hiddenLangTag===1?"hidden":""}
+//${hiddenLangTag==0?"-translate-x-5 opacity-0":"translate-x-0 opacity-1"} ${hiddenLangTag===0?"hidden":""}
   return (
-    <>
-      <div onClick={() => switchLang(!selectedLang)} onMouseEnter={()=>setInsideLang(true)} onMouseLeave={()=>setInsideLang(false)} 
-        className={`flex justify-center transition-colors duration-500 gap-x-2 h-fit w-[20vw] px-1 text-white border-2 
-        border-black hover:border-white hover:cursor-pointer`}>
-        {/* <div className={`h-fit relative transition-all duration-500 px-2 rounded-md text-center 
-        ${insideLang?"translate-x-0":"translate-x-5"}`}>
-          {langToChange==="es"?"EN":"ES"}
-        </div>
-        <Image src={langToChange==="es"?english:spanish} alt='Language image' 
-        className={`w-10 h-auto transition-all duration-500 
-        ${insideLang?"translate-y-0 opacity-1":"translate-y-5 opacity-0"}`}/> */}
+    
 
-        <div className=' grid grid-cols-2 gap-2 w-full p-2 bg-blue-400 text-white'>
-          <button className='px-2 py-1 bg-black' onClick={() => switchLang('en')}>
-            English
-          </button>
-          <button className='px-2 py-1 bg-black' onClick={() => switchLang('es')}>
-            Español
-          </button>
-        </div>
+      <div className='grid grid-cols-1 gap-2 w-full p-1  text-white px-20'>
+        <button className={`transition-all duration-500 ${selectedLang==1?"hidden":"showElementEnglish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('en')}>
+          <span>English</span>
+          <span className="flex h-full">
+            <Image src={english} width={45} height={45} alt="Spanish Language"
+              className="w-7 m-auto"/>
+          </span>
+        </button>
+        <button className={`transition-all duration-500 ${selectedLang==0?"hidden":"showElementSpanish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('es')}>
+          <span>Español</span>
+          <span className="flex h-full">
+            <Image src={spanish} width={45} height={45} alt="English Language"
+              className="w-7 m-auto"/>
+          </span>
+        </button>
       </div>
-      {/* <div onClick={() => switchLang("en")} onMouseEnter={()=>setInsideLang(true)} onMouseLeave={()=>setInsideLang(false)} 
-        className={`flex justify-center transition-colors duration-500 gap-x-2 h-fit w-[20vw] px-1 text-white border-2 
-        border-black hover:border-white hover:cursor-pointer`}>
-        <div className={`h-fit relative transition-all duration-500 px-2 rounded-md text-center 
-        ${insideLang?"translate-x-0":"translate-x-5"}`}>
-          {"EN"}
-        </div>
-        <Image src={english} alt='Language image' 
-        className={`w-10 h-auto transition-all duration-500 
-        ${insideLang?"translate-y-0 opacity-1":"translate-y-5 opacity-0"}`}/>
-      </div> */}
-    </>
+    
   )
 }
 
