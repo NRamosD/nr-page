@@ -1,5 +1,25 @@
 {
+    "nav":{
+        "Start":"Inicio",
+        "About":"Sobre mi",
+        "Skills":"Tecnologías",
+        "Summary":"Resumen",
+        "Experience":"Experiencia",
+        "turn-to":"Cambiar a"
+    },
     "landing":{
-        "h1":"Hola, soy Nix!"
+        "name":"Nixon Ramos",
+        "profession":"Ingeniero de Software",
+        "welcome":"Bienvenido! Conoce un poco de mi y lo que hago."
+    },
+    "summary":{
+        "imfrom":"Soy de",
+        "age":"Edad",
+        "istudied":"Me gradue en",
+        "university":"Escuela Superior Politécnica de Chimborazo",
+        "as":"como",
+        "profession":"Ingeniero de Software",
+        "coursesandcertifications":"Cursos y Certificaciones"
     }
+
 }
