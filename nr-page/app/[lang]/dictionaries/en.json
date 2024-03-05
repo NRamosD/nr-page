@@ -19,7 +19,12 @@
         "university":"Chimborazo Polytechnic Higher School",
         "as":"as",
         "profession":"Software Engineer",
-        "coursesandcertifications":"Courses and Certifications"
+        "coursesandcertifications":"Courses and Certifications",
+        "specializationfrontmeta":"Meta Front-End Developer Specialization",
+        "harvardcs50py":"Harvard CS50’s Web Programming with Python and JavaScript",
+        "csharpnet":"C# for .NET Developers",
+        "angularrouting":"Angular Routing",
+        "viewall":"View All"
 
     }
 }
