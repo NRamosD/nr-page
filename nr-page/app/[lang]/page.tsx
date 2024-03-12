@@ -1,10 +1,4 @@
 "use client"
-<<<<<<< HEAD
-import Image from 'next/image'
-import { Locale, getDictionary } from './dictionaries.ts'
-import SwitchLang from '../components/SwitchLang'
-import { useEffect } from 'react'
-=======
 import ecuador from "@/public/assets/img/banderaecuador.svg"
 import externallink from "@/public/assets/img/externallinksvgrepo.svg"
 import freecodecamp from "@/public/assets/img/freecodecamp.svg"
@@ -13,12 +7,14 @@ import meta from "@/public/assets/img/meta.png"
 import harvard from "@/public/assets/img/hardvard.png"
 import georgiatech from "@/public/assets/img/gt-logo.svg"
 
+import { useRef } from 'react'
 import Image from 'next/image'
+import Link from "next/link"
 import { Locale, getDictionary } from './dictionaries.ts'
 import SwitchLang from './components/SwitchLang.tsx'
-import { useRef } from 'react'
-import Link from "next/link"
->>>>>>> e733c9117bde1e1a003bf4ef086bfb900299da76
+import { SlideT1 } from "./components/SlideT1.tsx"
+import { Skills } from "../interfaces/main.ts"
+
 
 type Props = {
   params: {
@@ -26,17 +22,26 @@ type Props = {
   }
 }
 
+
+
 export default async function Home({ params: { lang } }: Props) {
+
+  const SlideSkillsData : Skills[]  = [
+    {tech:"HTML", img:"https://swiperjs.com/demos/images/nature-1.jpg"},
+    {tech:"CSS", img:"https://swiperjs.com/demos/images/nature-2.jpg"},
+    {tech:"JS", img:"https://swiperjs.com/demos/images/nature-3.jpg"}
+  ]
+  // } images={["","","https://swiperjs.com/demos/images/nature-3.jpg","https://swiperjs.com/demos/images/nature-4.jpg"]
   
   const intl = await getDictionary(lang)
     // const [scrollingDown, setScrollingDown] = useState(false);
 
-    useEffect(() => {
-      const handleScroll = () =>{
-        window.scrollTo()
-      }
-      let layoutScreen = window.addEventListener("scroll", handleScroll)
-    }, []);
+    // useEffect(() => {
+    //   const handleScroll = () =>{
+    //     window.scrollTo()
+    //   }
+    //   let layoutScreen = window.addEventListener("scroll", handleScroll)
+    // }, []);
   return (
     <>
     <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-[#0a374f]">
@@ -195,10 +200,15 @@ export default async function Home({ params: { lang } }: Props) {
       </div>
 
 
-      <div id='skills' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 `}>
-        <div className='h-full grid grid-cols-10 grid-rows-7 md:grid-rows-1 gap-2  '>
+      <div id='skills' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 `}>
+        <div className='hidden md:grid h-full grid-cols-10 grid-rows-7 md:grid-rows-1 gap-2  '>
           <div className='h-full w-full row-span-6 md:row-span-1 col-span-10 md:col-span-2 
             grid grid-rows-4 gap-5'>
+            <div className="flex justify-center row-span-1 col-span-2 ">
+              <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
+                <span className="text-black m-auto p-5">Basics</span>
+              </div>
+            </div>
             <div className="flex justify-center row-span-1 col-span-2 ">
               <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
                 <span className="text-black m-auto p-5">Frontend</span>
@@ -211,83 +221,84 @@ export default async function Home({ params: { lang } }: Props) {
             </div>
             <div className="flex justify-center row-span-1 col-span-2 ">
               <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
-                <span className="text-black m-auto p-5">Some Tools</span>
-              </div>
-            </div>
-            <div className="flex justify-center row-span-1 col-span-2 ">
-              <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
                 <span className="text-black m-auto p-5">Engineering and Others</span>
               </div>
             </div>
 
           </div>
           <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-8 bg-white 
-            grid grid-cols-3 grid-rows-4 gap-5 text-black overflow-auto '>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
+            grid grid-cols-3 grid-rows-4 gap-5 text-black overflow-auto p-10'>
+              <div className="flex justify-center w-full h-full bg-white shadow-lg shadow-black col-span-3 ">
+                <div className="relative m-auto text-center">
+                  <SlideT1 skillsData= {SlideSkillsData}/>
                 </div>
               </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
+              <div className="flex justify-center w-full h-full bg-white shadow-lg shadow-black col-span-3 ">
+                <div className="relative m-auto text-center">
+                  <SlideT1 skillsData= {SlideSkillsData}/>
                 </div>
               </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
+              <div className="flex justify-center w-full h-full bg-white shadow-lg shadow-black col-span-3 ">
+                <div className="relative m-auto text-center">
+                  <SlideT1 skillsData= {SlideSkillsData}/>
                 </div>
               </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
+              <div className="flex justify-center w-full h-full bg-white shadow-lg shadow-black col-span-3 ">
+                <div className="relative m-auto text-center">
+                  <SlideT1 skillsData= {SlideSkillsData}/>
                 </div>
               </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-              <div className="flex justify-center w-full h-full bg-slate-400 ">
-                <div className=" m-auto">
-                  asdjkash
-                </div>
-              </div>
-
-
           </div>
         </div>
+
+
+        <div className='grid md:hidden h-full grid-cols-10 grid-rows-4 gap-2 p-5 '>
+          <div className=' w-full col-span-10 bg-white'>
+            <div className=" justify-center row-span-1">
+              <div className="flex cursor-pointer h-fit w-full  rounded-l-none">
+                <span className="text-black m-auto p-2">Basics</span>
+              </div>
+              <SlideT1 skillsData= {SlideSkillsData}/>
+            </div>
+          </div>
+
+          <div className=' w-full col-span-10 bg-white'>
+            <div className=" justify-center row-span-1">
+              <div className="flex cursor-pointer h-fit w-full  rounded-l-none">
+                <span className="text-black m-auto p-2">Basics</span>
+              </div>
+              <SlideT1 skillsData= {SlideSkillsData}/>
+            </div>
+          </div>
+
+          <div className=' w-full col-span-10 bg-white'>
+            <div className=" justify-center row-span-1">
+              <div className="flex cursor-pointer h-fit w-full  rounded-l-none">
+                <span className="text-black m-auto p-2">Basics</span>
+              </div>
+              <SlideT1 skillsData= {SlideSkillsData}/>
+            </div>
+          </div>
+
+          <div className=' w-full col-span-10 bg-white'>
+            <div className=" justify-center row-span-1">
+              <div className="flex cursor-pointer h-fit w-full  rounded-l-none">
+                <span className="text-black m-auto p-2">Basics</span>
+              </div>
+              <SlideT1 skillsData= {SlideSkillsData}/>
+            </div>
+          </div>
+          
+          
+          
+
+        </div>
+
+
       </div>
+
+
+
       <div id='experience' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 bg-green-500`}>
         <div className='h-full grid grid-cols-10 grid-rows-7 md:grid-rows-1 gap-5 '>
           <div className='h-full w-full row-span-6 md:row-span-1 col-span-10 md:col-span-3 bg-yellow-300'>di</div>

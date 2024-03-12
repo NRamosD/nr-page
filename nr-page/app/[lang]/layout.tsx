@@ -3,17 +3,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local';
 import './globals.css'
-<<<<<<< HEAD
-import SwitchLang from '../components/SwitchLang'
-import { Locale, getDictionary } from './dictionaries.tsx'
-import NavBar from '../components/Navbar'
-=======
 import SwitchLang from './components/SwitchLang'
 import { Locale, getDictionary } from './dictionaries'
 import NavBar from './components/Navbar'
 
 const font1 = localFont({ src: '../../public/assets/fonts/firasansmedium.ttf' });
->>>>>>> e733c9117bde1e1a003bf4ef086bfb900299da76
 
 const inter = Inter({ subsets: ['latin'] })
 
