@@ -1,6 +1,8 @@
+"use client"
 import Image from 'next/image'
 import { Locale, getDictionary } from './dictionaries.ts'
 import SwitchLang from '../components/SwitchLang'
+import { useEffect } from 'react'
 
 type Props = {
   params: {
@@ -10,6 +12,14 @@ type Props = {
 
 export default async function Home({ params: { lang } }: Props) {
   const intl = await getDictionary(lang)
+    // const [scrollingDown, setScrollingDown] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () =>{
+        window.scrollTo()
+      }
+      let layoutScreen = window.addEventListener("scroll", handleScroll)
+    }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-black">
       <div className='h-[90vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20'>

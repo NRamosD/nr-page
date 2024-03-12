@@ -1,4 +1,4 @@
-import 'server-only'
+
 
 export type Locale = keyof typeof dictionaries
 
@@ -7,4 +7,4 @@ const dictionaries = {
   es: () => import('./dictionaries/es.json').then((module) => module.default),
 }
 
-export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+export const getDictionary = async (locale: Locale) => await dictionaries[locale]()

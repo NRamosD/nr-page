@@ -1,8 +1,9 @@
+import 'server-only'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import SwitchLang from '../components/SwitchLang'
-import { Locale, getDictionary } from './dictionaries'
+import { Locale, getDictionary } from './dictionaries.tsx'
 import NavBar from '../components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })

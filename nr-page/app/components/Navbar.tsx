@@ -13,10 +13,10 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
                     <a href='#me'>About</a>
                 </li>
                 <li>
-                    <a href='#me'>Skills</a>
+                    <a href='#me'>Me</a>
                 </li>
                 <li>
-                    <a href='#me'>Me</a>
+                    <a href='#me'>Skills</a>
                 </li>
                 <li>
                     <a href='#me'>About</a>
