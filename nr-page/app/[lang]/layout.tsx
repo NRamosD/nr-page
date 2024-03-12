@@ -1,10 +1,19 @@
 import 'server-only'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local';
 import './globals.css'
+<<<<<<< HEAD
 import SwitchLang from '../components/SwitchLang'
 import { Locale, getDictionary } from './dictionaries.tsx'
 import NavBar from '../components/Navbar'
+=======
+import SwitchLang from './components/SwitchLang'
+import { Locale, getDictionary } from './dictionaries'
+import NavBar from './components/Navbar'
+
+const font1 = localFont({ src: '../../public/assets/fonts/firasansmedium.ttf' });
+>>>>>>> e733c9117bde1e1a003bf4ef086bfb900299da76
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +22,7 @@ export const metadata: Metadata = {
   description: "Hi! I'm Nixon Ramos, an Ecuadorian Software Engineer.",
 }
 
-type Props = {
+interface Props {
   params: {
     lang: Locale
   }
@@ -21,24 +30,25 @@ type Props = {
 
 
 export default function RootLayout({
-  children
+  children,
+  params,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  params: Props['params'],
 }) {
 
-  
-
+  const { lang } = params;
 
   return (
     <html lang="">
-      <body className={inter.className}>
-        <header className='md:w-full grid justify-center sticky top-0 bg-gradient-to-t from-transparent to-black'>
-          <NavBar/>
+      <body className={`${font1.className}`}>
+        <header className='navbar w-full grid justify-center fixed top-0 bg-[#095e83] shadow-2xl z-20 border-b-2 border-[#373737]'>
+          <NavBar lang={lang} />
         </header>
         {children}
         <footer className=''>
 
-          <span className='w-full h-28 fixed bottom-0 bg-gradient-to-t from-black to-transparent'></span>
+          {/* <span className='w-full h-28 fixed bottom-0 bg-gradient-to-t from-black to-transparent'></span> */}
         </footer>
       </body>
     </html>
