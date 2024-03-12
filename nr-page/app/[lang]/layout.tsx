@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="">
       <body className={`${font1.className}`}>
-        <header className='w-full grid justify-center fixed top-0 bg-[#0a374f] shadow-2xl z-20 border-b-2 border-[#373737]'>
+        <header className='navbar w-full grid justify-center fixed top-0 bg-[#095e83] shadow-2xl z-20 border-b-2 border-[#373737]'>
           <NavBar lang={lang} />
         </header>
         {children}

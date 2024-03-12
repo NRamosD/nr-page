@@ -94,7 +94,7 @@ export default async function Home({ params: { lang } }: Props) {
             <div className="col-span-6 text-left">
               <h3 className="text-[20px] md:text-[30px] underline">{intl.summary.coursesandcertifications}</h3>
             </div>
-            <div className="grid gap-2 col-span-3 p-2 text-[14px] md:text-[18px]">
+            <div className="grid gap-2 col-span-3 p-2 text-[14px] md:text-[18px] max-h-[250px] overflow-y-auto">
               <Link target="_blank" href={"https://www.coursera.org/account/accomplishments/specialization/8UKZ8DUMEAAB"} className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                 <h3>
                   {intl.summary.specializationfrontmeta}
@@ -113,6 +113,13 @@ export default async function Home({ params: { lang } }: Props) {
               <Link target="_blank" href={"https://www.coursera.org/account/accomplishments/records/H9JBHSZVA4HB"} className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                 <h3>
                   {intl.summary.csharpnet}
+                </h3>
+                <Image className="" src={externallink}  alt={intl.summary.university} 
+                  width={20} height={20}/>
+              </Link>
+              <Link target="_blank" href={"https://www.coursera.org/account/accomplishments/verify/LNZDHVP6DS3A"} className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
+                <h3>
+                  {intl.summary.angularrouting}
                 </h3>
                 <Image className="" src={externallink}  alt={intl.summary.university} 
                   width={20} height={20}/>
@@ -173,10 +180,97 @@ export default async function Home({ params: { lang } }: Props) {
       </div>
 
 
-      <div id='skills' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 bg-green-500`}>
-        <div className='h-full grid grid-cols-10 grid-rows-7 md:grid-rows-1 gap-5 '>
-          <div className='h-full w-full row-span-6 md:row-span-1 col-span-10 md:col-span-2 bg-yellow-300'>di</div>
-          <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-8 bg-yellow-300'>di</div>
+      <div id='skills' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 `}>
+        <div className='h-full grid grid-cols-10 grid-rows-7 md:grid-rows-1 gap-2  '>
+          <div className='h-full w-full row-span-6 md:row-span-1 col-span-10 md:col-span-2 
+            grid grid-rows-4 gap-5'>
+            <div className="flex justify-center row-span-1 col-span-2 ">
+              <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
+                <span className="text-black m-auto p-5">Frontend</span>
+              </div>
+            </div>
+            <div className="flex justify-center row-span-1 col-span-2 ">
+              <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
+                <span className="text-black m-auto p-5">Backend</span>
+              </div>
+            </div>
+            <div className="flex justify-center row-span-1 col-span-2 ">
+              <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
+                <span className="text-black m-auto p-5">Some Tools</span>
+              </div>
+            </div>
+            <div className="flex justify-center row-span-1 col-span-2 ">
+              <div className="flex transition-all hover:translate-x-2 hover:shadow-none cursor-pointer h-fit w-full bg-white my-auto shadow-2xl shadow-black  rounded-l-none xl:rounded-l-lg">
+                <span className="text-black m-auto p-5">Engineering and Others</span>
+              </div>
+            </div>
+
+          </div>
+          <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-8 bg-white 
+            grid grid-cols-3 grid-rows-4 gap-5 text-black overflow-auto '>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+              <div className="flex justify-center w-full h-full bg-slate-400 ">
+                <div className=" m-auto">
+                  asdjkash
+                </div>
+              </div>
+
+
+          </div>
         </div>
       </div>
       <div id='experience' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 bg-green-500`}>
