@@ -42,12 +42,13 @@ export const SlideT1 = ({skillsData}:SlideT1Props) => {
                 disableOnInteraction: false,
                 reverseDirection: true
             }}
+            className='h-full'
 
         >
             {
                 skillsData?.map((item,index)=>{
                     return(
-                        <SwiperSlide key={index} className='text-black'>
+                        <SwiperSlide key={index} className='text-black h-full w-full'>
                             <img src={item.img} />
                             {item.tech}
                         </SwiperSlide>

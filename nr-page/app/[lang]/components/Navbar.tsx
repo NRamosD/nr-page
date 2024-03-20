@@ -74,7 +74,7 @@ const NavBar = async (props : {lang:any}) => {
     // };
     return (
     <>
-        <nav className=''>
+        <nav className='hidden xl:block'>
             <ul className='inline-flex gap-5 md:gap-10 px-2 pb-2 pt-2 md:pb-2 w-full uppercase'>
                 <li className='transition-all duration-500 border-2 px-5 py-1 hover:translate-y-1 hover:bg-slate-400 text-[10px] md:text-[12px] xl:text-base'>
                     <a href='#start'>{intl.nav.Start}</a>

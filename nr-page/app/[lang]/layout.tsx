@@ -7,6 +7,7 @@ import SwitchLang from './components/SwitchLang'
 import { Locale, getDictionary } from './dictionaries'
 import NavBar from './components/Navbar'
 
+
 const font1 = localFont({ src: '../../public/assets/fonts/firasansmedium.ttf' });
 
 const inter = Inter({ subsets: ['latin'] })
@@ -32,9 +33,13 @@ export default function RootLayout({
 }) {
 
   const { lang } = params;
+  
 
   return (
     <html lang="">
+      {/* <head>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      </head> */}
       <body className={`${font1.className}`}>
         <header className='navbar w-full grid justify-center fixed top-0 bg-[#095e83] shadow-2xl z-20 border-b-2 border-[#373737]'>
           <NavBar lang={lang} />
@@ -44,6 +49,10 @@ export default function RootLayout({
 
           {/* <span className='w-full h-28 fixed bottom-0 bg-gradient-to-t from-black to-transparent'></span> */}
         </footer>
+        {/* <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script> */}
       </body>
     </html>
   )
