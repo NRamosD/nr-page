@@ -9,8 +9,13 @@
 .swiper-slide {
   background-position: center;
   background-size: cover;
+<<<<<<< HEAD
   width: 70%;
   height: 99%;
+=======
+  width: 15%;
+  height: 15%;
+>>>>>>> 656db755b465805b0be99d73003e1579a20dd10e
 }
 
 .swiper-slide img {
