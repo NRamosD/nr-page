@@ -1,4 +1,4 @@
-"use client"
+
 import ecuador from "@/public/assets/img/banderaecuador.svg"
 import externallink from "@/public/assets/img/externallinksvgrepo.svg"
 import freecodecamp from "@/public/assets/img/freecodecamp.svg"
@@ -6,8 +6,12 @@ import google from "@/public/assets/img/google.png"
 import meta from "@/public/assets/img/meta.png"
 import harvard from "@/public/assets/img/hardvard.png"
 import georgiatech from "@/public/assets/img/gt-logo.svg"
+import catpixel from "@/public/assets/img/catpixel.gif"
+import laptoppixel from "@/public/assets/img/laptoppixel.png"
 
-import { useEffect, useRef } from 'react'
+
+
+// import { useState, useEffect, useRef, Suspense } from 'react'
 import Image from 'next/image'
 import Link from "next/link"
 import { Locale, getDictionary } from './dictionaries.ts'
@@ -18,6 +22,7 @@ import { Skills } from "../interfaces/main.ts"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { RadarChart } from "./components/RadarChart.tsx"
+import { StartSection } from "./components/StartSection.tsx"
 
 
 
@@ -34,37 +39,43 @@ type Props = {
 
 export default async function Home({ params: { lang } }: Props) {
 
+
   const SlideSkillsData : Skills[]  = [
     {tech:"HTML", img:"https://swiperjs.com/demos/images/nature-1.jpg"},
     {tech:"CSS", img:"https://swiperjs.com/demos/images/nature-2.jpg"},
     {tech:"JS", img:"https://swiperjs.com/demos/images/nature-3.jpg"}
   ]
-  // } images={["","","https://swiperjs.com/demos/images/nature-3.jpg","https://swiperjs.com/demos/images/nature-4.jpg"]
-  
-  useEffect(() => {
-    AOS.init({
-        // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: 'aos-init', // class applied after initialization
-        animatedClassName: 'aos-animate', // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // useEffect(() => {
+
+  //   // startEffects()
+
+
+  //   AOS.init({
+  //       // Global settings:
+  //       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  //       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  //       initClassName: 'aos-init', // class applied after initialization
+  //       animatedClassName: 'aos-animate', // class applied on animation
+  //       useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  //       disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  //       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  //       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
         
 
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 120, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 400, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  //       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  //       offset: 120, // offset (in px) from the original trigger point
+  //       delay: 0, // values from 0 to 3000, with step 50ms
+  //       duration: 400, // values from 0 to 3000, with step 50ms
+  //       easing: 'ease', // default easing for AOS animations
+  //       once: false, // whether animation should happen only once - while scrolling down
+  //       mirror: false, // whether elements should animate out while scrolling past them
+  //       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
-    });
-  }, []);
+  //   });
+  // }, []);
+
+
   const intl = await getDictionary(lang)
     // const [scrollingDown, setScrollingDown] = useState(false);
 
@@ -91,14 +102,22 @@ export default async function Home({ params: { lang } }: Props) {
                 src={}
               />
             </div> */}
-            <div className=' my-auto'>
+            <StartSection landing={intl.landing}/>
+            
+            {/* <div className=' my-auto'>
               <div className=' -space-y-10'>
                 <h1 className='text-[100px] p-0 uppercase'>{intl.landing.name}</h1>
                 <h2 className='text-[20px] p-0 uppercase'>{intl.landing.profession}</h2>
               </div>
-              <h3 className='text-[60px] uppercase'>{`${intl.landing.welcome.split("!")[0]}!`}</h3>
+              <div className="">
+                <h3 className='text-[60px] uppercase'>{`${intl.landing.welcome.split("!")[0]}!`}</h3>
+                <div className="flex">
+                  <Image src={laptoppixel} alt="cat pixel" width={70} height={70} className=" pt-10"/>
+                  <Image src={catpixel} alt="cat pixel" width={100} height={60} className="mb-2"/>
+                </div>
+              </div>
               <p className='text-[40px] uppercase'>{`${intl.landing.welcome.split("!")[1]}`}</p>
-            </div>
+            </div> */}
           </div>
           {/* <div className={`h-full flex xl:row-span-3 bg-orange-600`}>
             <div className=' '>
@@ -153,7 +172,7 @@ export default async function Home({ params: { lang } }: Props) {
             <div className="md:col-span-6 text-left">
               <h3 className="text-[20px] md:text-[30px] underline">{intl.summary.coursesandcertifications}</h3>
             </div>
-            <div className="grid gap-2 md:col-span-3 p-2 text-[14px] md:text-[18px] max-h-[250px] overflow-y-auto">
+            <div className="grid relative gap-2 md:col-span-3 p-2 text-[14px] md:text-[18px] max-h-[250px] overflow-y-auto">
               <Link target="_blank" href={"https://www.coursera.org/account/accomplishments/specialization/8UKZ8DUMEAAB"} className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                 <h3>
                   {intl.summary.specializationfrontmeta}
@@ -190,7 +209,7 @@ export default async function Home({ params: { lang } }: Props) {
                 <Image className="" src={externallink}  alt={intl.summary.university} 
                   width={20} height={20}/>
               </Link>
-              <Link target="_blank" href={"https://www.linkedin.com/in/nix-ramos/details/certifications/"} className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
+              <Link target="_blank" href={"https://www.linkedin.com/in/nix-ramos/details/certifications/"} className="flex gap-2 sticky bottom-0 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                 <h3>
                   {intl.summary.viewall}
                 </h3>
@@ -247,9 +266,9 @@ export default async function Home({ params: { lang } }: Props) {
             grid grid-cols-3 gap-5 text-black overflow-auto p-10 overflow-y-auto'>
               <div className="w-full h-full relative bg-white shadow-lg shadow-black col-span-3 ">
                 <div className="w-80 h-80 flex">
-                  <RadarChart/>
-                  <RadarChart/>
-                  <RadarChart/>
+                  <div className="w-fit m-auto">
+                    <RadarChart/>
+                  </div>
                 </div>
                 <div className="grid-frameworks">
                   <div className="border-2 border-black bg-indigo-700 flex justify-center">
@@ -283,7 +302,7 @@ export default async function Home({ params: { lang } }: Props) {
 
 
       {/* --------------------------------------------------- EXPERIENCE ---------------------------------------------------*/}
-      <div id='experience' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20  `}>
+      <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20  `}>
         <h2 className="text-center text-5xl">EXPERIENCE</h2>
         <div className='relative h-full overflow-y-auto border-y-4 border-white'>
           <div className="grid grid-cols-10 gap-2 xl:gap-5">
@@ -456,7 +475,7 @@ export default async function Home({ params: { lang } }: Props) {
         <div className='h-full grid grid-cols-10 gap-5 md:gap-10'>
           <div className='w-full col-span-10 md:col-span-6 m-auto'>
             <h2 className="text-5xl my-4">ABOUT ME</h2>
-            <p className=" text-2xl">
+            <p className=" text-base md:text-2xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet. Donec diam libero, ullamcorper in blandit vel, auctor id nisi. Quisque sed nisl eu erat sodales aliquet. Maecenas suscipit sem id suscipit mattis. Mauris eget pretium nisi. Nam nec fringilla quam. Quisque commodo pretium elementum. Aenean ultrices mi eu ullamcorper egestas. Suspendisse a neque ligula.
             </p>
           </div>
@@ -472,12 +491,28 @@ export default async function Home({ params: { lang } }: Props) {
         </div>
       </div>
     </main>
-    {/* <footer className='px-80'>
-      <div className='grid grid-cols-3 h-[20vh] bg-orange-400'>
-
+    <footer className='gradient-bg h-[20vh] flex relative'>
+      <div className='m-auto grid text-white '>
+        <div className="text-to-show grid text-5xl">
+          <h3 className="text-center" >Cooked with</h3>
+          <span className="text-center" >❤️</span>
+          <h3 className="text-center" >By Nixon Ramos</h3>
+        </div>
+        <div className="m-auto text-to-show grid grid-cols-2 text-2xl">
+            <span className="text-center">🟡</span>
+            <Link href={"#"} className="transition-all duration-500 hover:text-yellow-400 hover:underline">Reach out me</Link>
+            <span className="text-center">🔵</span>
+            <Link href={"#"} className="transition-all duration-500 hover:text-blue-500 hover:underline">Linkedin</Link>
+            <span className="text-center">🔴</span>
+            <Link href={"#"} className="transition-all duration-500 hover:text-red-500 hover:underline">GitHub</Link>
+        </div>
+      </div>
+      <div className="text-center absolute bottom-0 right-0 left-0 text-white">
+        <h4 className="text-center">©{new Date().getUTCFullYear()} NixR.dev</h4>
+        <h4 className="text-center">All rights reserved.</h4>
       </div>
     </footer> 
-    */}
+   
   </>
   )
 }

@@ -22,36 +22,25 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0a374f;
 }
 
-/* Estilo para la barra de desplazamiento */
-/* Cambia los colores, anchos y otros estilos según tus preferencias */
-
-/* Barra de desplazamiento */
 ::-webkit-scrollbar {
-  width: 3px; /* Ancho de la barra de desplazamiento */
+  width: 5px;
 }
 
-/* Track (fondo de la barra de desplazamiento) */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color de fondo */
+  background: transparent;
 }
 
-/* Thumb (parte deslizante de la barra de desplazamiento) */
 ::-webkit-scrollbar-thumb {
-  background: black; /* Color de la parte deslizante */
-  border-radius: 0px; /* Borde redondeado */
+  background: white;
+  border-radius: 0px;
 }
 
 /* Esquina (esquina inferior derecha de la barra de desplazamiento) */
 ::-webkit-scrollbar-corner {
-  background: #f1f1f1; /* Color de fondo */
+  background: transparent; /* Color de fondo */
 }
 
 .grid-frameworks-1{
@@ -69,4 +58,35 @@ body {
 
 .grid-frameworks-1 div:hover{
   background-color: red;
+}
+
+
+
+.gradient-bg{
+  height: 150vh;
+  padding-top: 400px;
+  background-color: transparent;
+  color: white;
+  background-image: linear-gradient(to bottom, #0a374f , black 40%);
+}
+
+
+
+@keyframes animation-text {
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+
+  }
+  
+}
+.text-to-show{
+  view-timeline-name: --text-showing;
+  view-timeline-axis: block;
+  animation-timeline: --text-showing;
+  animation-name: animation-text;
 }

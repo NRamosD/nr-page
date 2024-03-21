@@ -8,9 +8,11 @@
         "turn-to":"Change to"
     },
     "landing":{
+        "im":"I'm",
         "name":"Nixon Ramos",
         "profession":"Software Engineer",
-        "welcome":"Welcome! Get to know a little about me and what I do."
+        "welcome":"Welcome! Get to know a little about me and what I do.",
+        "start":"Start"
     },
     "summary":{
         "imfrom":"I am from",
