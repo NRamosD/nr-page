@@ -128,8 +128,8 @@ export default async function Home({ params: { lang } }: Props) {
 
 
       {/* --------------------------------------------------- SUMMARY ---------------------------------------------------*/}
-      <div id='summary' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20`}>
-        <div className='grid grid-cols-1 gap-5'>
+      <div id='summary' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 flex`}>
+        <div className='grid grid-cols-1 gap-5 my-auto'>
           <div className='w-full grid md:grid-cols-6 text-[30px] md:text-[50px] '>
             <div className='my-auto grid gap-y-5 md:col-span-2 '>
                 <div className='grid gap-y-2 justify-center'>
@@ -259,9 +259,9 @@ export default async function Home({ params: { lang } }: Props) {
 
 
 
-      {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
-      <div id='skills' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 `}>
-        <div className='grid h-full grid-cols-10 grid-rows-1 md:grid-rows-1 gap-2  '>
+    {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
+      <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 flex`}>
+        <div className='grid grid-cols-10 grid-rows-1 md:grid-rows-1 gap-2 my-auto'>
           <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-10 bg-white 
             grid grid-cols-3 gap-5 text-black overflow-auto p-10 overflow-y-auto'>
               <div className="w-full h-full relative bg-white shadow-lg shadow-black col-span-3 ">
