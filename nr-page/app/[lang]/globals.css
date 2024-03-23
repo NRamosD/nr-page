@@ -72,7 +72,7 @@ body {
 
 
 
-@keyframes animation-text {
+@keyframes animation-text-footer {
   from{
     opacity: 0;
     scale: 25%;
@@ -88,5 +88,37 @@ body {
   view-timeline-name: --text-showing;
   view-timeline-axis: block;
   animation-timeline: --text-showing;
-  animation-name: animation-text;
+  animation-name: animation-text-footer;
+}
+
+
+
+/* @keyframes animation-opacity-summary {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.summary-section-to-show{
+  view-timeline-name: --section-summary-showing;
+  view-timeline-axis: block;
+  animation-timeline: --section-summary-showing;
+  animation-name: animation-text-footer;
+} */
+
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(60vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
