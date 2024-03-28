@@ -70,9 +70,9 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-[#0a374f]">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-[#e0d8aa]">
       
-      {/* --------------------------------------------------- START ---------------------------------------------------*/}
+      {/* --------------------------------------------------- START -----------------------------------------0a374f----------*/}
 
       <div id='start' className='h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20'>
         <div className={`h-[90vh] grid  gap-4`}>
@@ -340,7 +340,7 @@ export default async function Home({ params: { lang } }: Props) {
               alt="me"
               width={500}
               height={500}
-              className=" h-[400px] object-cover rounded-lg shadow-xl shadow-black bg-white"
+              className=" h-[400px] object-cover rounded-lg shadow-xl shadow-[#927843] bg-white"
             />
           </div>
         </div>

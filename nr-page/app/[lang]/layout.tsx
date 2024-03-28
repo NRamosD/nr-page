@@ -41,7 +41,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head> */}
       <body className={`${font1.className}`}>
-        <header className='navbar w-full grid justify-center fixed top-0 bg-[#095e83] shadow-2xl z-20 border-b-2 border-[#373737]'>
+        <header className='navbar w-full grid justify-center fixed top-0 bg-[#927843] shadow-2xl z-20 border-b-2 border-[#ffffff]'>
           <NavBar lang={lang} />
         </header>
         {children}

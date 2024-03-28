@@ -41,7 +41,7 @@ const SwitchLang: FC<Props> = () => {
   return (
     
 
-      <div className='grid grid-cols-1 gap-2 w-full p-1  text-white'>
+      <div className='grid grid-cols-1 gap-2 w-full p-1  text-white bg-[#927843]'>
         <button className={`transition-all duration-500 ${selectedLang==1?"hidden":"showElementEnglish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('en')}>
           <span>Inglés</span>
           <span className="flex h-full">

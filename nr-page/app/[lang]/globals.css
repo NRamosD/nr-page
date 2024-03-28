@@ -122,3 +122,8 @@ body {
   transform: none;
   visibility: visible;
 }
+
+
+.text-shadow-landing{
+  text-shadow: rgb(161, 161, 161) 3px 3px 1px;
+}
