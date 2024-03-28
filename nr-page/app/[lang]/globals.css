@@ -127,3 +127,7 @@ body {
 .text-shadow-landing{
   text-shadow: rgb(161, 161, 161) 3px 3px 1px;
 }
+
+.bg-color-gradient{
+  background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%);
+}
