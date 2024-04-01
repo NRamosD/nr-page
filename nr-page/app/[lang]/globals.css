@@ -22,11 +22,11 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #0a374f;
+  background-color: white;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -67,7 +67,8 @@ body {
   padding-top: 400px;
   background-color: transparent;
   color: white;
-  background-image: linear-gradient(to bottom, #0a374f , black 40%);
+  background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%);
+  /* background-image: linear-gradient(to bottom, #0a374f , black 40%); */
 }
 
 

@@ -108,7 +108,7 @@ export default async function Home({ params: { lang } }: Props) {
 
 
       {/* --------------------------------------------------- SUMMARY ---------------------------------------------------*/}
-      <div id='summary' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 flex`}>
+      <div id='summary' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 flex `}>
         <SummarySection summary={intl.summary}/>
       </div>
 
@@ -116,39 +116,13 @@ export default async function Home({ params: { lang } }: Props) {
 
     {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
       <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 flex`}>
-        <div className='grid grid-cols-10 grid-rows-1 md:grid-rows-1 gap-2 my-auto'>
-          <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-10 bg-white 
-            grid grid-cols-3 gap-5 text-black overflow-auto p-10 overflow-y-auto'>
-              <div className="w-full h-full relative bg-white shadow-lg shadow-black col-span-3 ">
-                <div className="w-80 h-80 flex">
-                  <div className="w-fit m-auto">
-                    <RadarChart/>
+        <div className='grid gap-2 m-auto'>
+          <div className='w-[1000px] h-[600px] bg-black'>
+              <div className=" ">
+                  <div>
+                    qweq
+
                   </div>
-                </div>
-                <div className="grid-frameworks">
-                  <div className="border-2 border-black bg-indigo-700 flex justify-center">
-                    <section className="relative flex justify-center m-auto">
-                      <Image src={meta} alt="hols" width={100} height={100} />
-                      <h3 className="m-auto">Angular</h3>
-                    </section>
-                  </div>
-                </div>
-                <div className="grid-frameworks">
-                  <div className="border-2 border-black bg-indigo-700 flex justify-center">
-                    <section className="relative flex justify-center m-auto">
-                      <Image src={meta} alt="hols" width={100} height={100} />
-                      <h3 className="m-auto">Vue.js</h3>
-                    </section>
-                  </div>
-                </div>
-                <div className="grid-frameworks">
-                  <div className="border-2 border-black bg-indigo-700 flex justify-center" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                    <section className="relative flex justify-center m-auto">
-                      <Image src={meta} alt="hols" width={100} height={100} />
-                      <h3 className="m-auto">React</h3>
-                    </section>
-                  </div>
-                </div>
               </div>
           </div>
         </div>
@@ -329,8 +303,8 @@ export default async function Home({ params: { lang } }: Props) {
       <div id='about' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 p-5`}>
         <div className='h-full grid grid-cols-10 gap-5 md:gap-10'>
           <div className='w-full col-span-10 md:col-span-6 m-auto'>
-            <h2 className="text-5xl my-4">ABOUT ME</h2>
-            <p className=" text-base md:text-2xl">
+            <h2 className="text-5xl my-4 text-shadow-landing">ABOUT ME</h2>
+            <p className=" text-base md:text-2xl text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet. Donec diam libero, ullamcorper in blandit vel, auctor id nisi. Quisque sed nisl eu erat sodales aliquet. Maecenas suscipit sem id suscipit mattis. Mauris eget pretium nisi. Nam nec fringilla quam. Quisque commodo pretium elementum. Aenean ultrices mi eu ullamcorper egestas. Suspendisse a neque ligula.
             </p>
           </div>
@@ -348,21 +322,21 @@ export default async function Home({ params: { lang } }: Props) {
     </main>
     <footer className='gradient-bg h-[20vh] flex relative'>
       <div className='m-auto grid text-white '>
-        <div className="text-to-show grid text-5xl">
+        <div className="text-to-show grid text-5xl text-shadow-landing">
           <h3 className="text-center" >Cooked with</h3>
           <span className="text-center" >❤️</span>
           <h3 className="text-center" >By Nixon Ramos</h3>
         </div>
-        <div className="m-auto text-to-show grid grid-cols-2 text-2xl">
-            <span className="text-center">🟡</span>
-            <Link href={"#"} className="transition-all duration-500 hover:text-yellow-400 hover:underline">Reach out me</Link>
-            <span className="text-center">🔵</span>
-            <Link href={"#"} className="transition-all duration-500 hover:text-blue-500 hover:underline">Linkedin</Link>
-            <span className="text-center">🔴</span>
-            <Link href={"#"} className="transition-all duration-500 hover:text-red-500 hover:underline">GitHub</Link>
+        <div className="m-auto text-to-show grid grid-cols-1 text-2xl text-gray-500">
+            <span className="text-center text-white">.</span>
+            <Link href={"#"} className="transition-all duration-500 hover:text-black hover:underline text-center">Reach out me</Link>
+            <span className="text-center text-white">.</span>
+            <Link href={"#"} className="transition-all duration-500 hover:text-black hover:underline text-center">Linkedin</Link>
+            <span className="text-center text-white">.</span>
+            <Link href={"#"} className="transition-all duration-500 hover:text-black hover:underline text-center">GitHub</Link>
         </div>
       </div>
-      <div className="text-center absolute bottom-0 right-0 left-0 text-white">
+      <div className="text-center absolute bottom-0 right-0 left-0 text-black">
         <h4 className="text-center">©{new Date().getUTCFullYear()} NixR.dev</h4>
         <h4 className="text-center">All rights reserved.</h4>
       </div>

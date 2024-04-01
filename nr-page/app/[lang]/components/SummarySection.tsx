@@ -78,10 +78,10 @@ export const SummarySection = (props : {summary:any}) => {
     return(
         <>
             <div className='grid grid-cols-1 gap-5 my-auto summary-section-to-show'>
-                <div data-aos="fade-up" 
+                <div data-aos="fade-up " 
                     className='w-full grid md:grid-cols-6 text-[30px] md:text-[50px]'>
                     <div className='my-auto grid gap-y-5 md:col-span-2 '>
-                        <div className='grid gap-y-2 justify-center'>
+                        <div className='grid gap-y-2 justify-center text-shadow-landing'>
                         <p className="">{props.summary.imfrom}</p>
                         <Image src={ecuador} alt="Ecuadorian" 
                             width={60} height={10}
@@ -89,13 +89,13 @@ export const SummarySection = (props : {summary:any}) => {
                             className="mx-auto"/>
                         </div>
                         <hr className="mx-5"/>
-                        <div className="grid md:-space-y-5 mx-auto text-center">
+                        <div className="grid md:-space-y-5 mx-auto text-center text-shadow-landing">
                             <span>{props.summary.age}</span>
                             <span>24</span>
                         </div>
                     </div>
                     <div className='my-auto grid gap-y-5 md:col-span-4 '>
-                    <div className=' grid text-[20px] md:text-[35px]'>
+                    <div className=' grid text-[20px] md:text-[35px] text-shadow-landing'>
                         <span>
                         {props.summary.istudied}
                         </span>
@@ -120,7 +120,7 @@ export const SummarySection = (props : {summary:any}) => {
                 <div className='w-full grid grid-cols-1 md:grid-cols-6 gap-5 text-[30px] md:text-[50px]'>
                     <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="150"  
                         className="md:col-span-6 text-left">
-                    <h3 className="text-[20px] md:text-[30px] underline">{props.summary.coursesandcertifications}</h3>
+                    <h3 className="text-[20px] md:text-[30px] text-shadow-landing">{props.summary.coursesandcertifications}</h3>
                     </div>
                     <div className="grid relative gap-2 md:col-span-3 p-2 text-[14px] md:text-[18px] max-h-[250px] overflow-y-auto">
                         {
@@ -176,6 +176,7 @@ export const SummarySection = (props : {summary:any}) => {
                             width={20} height={20}/>
                         </Link> */}
                         <Link target="_blank" href={"https://www.linkedin.com/in/nix-ramos/details/certifications/"} 
+                            data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="150"
                             className="flex gap-2 sticky bottom-0 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                             <h3>
                             {props.summary.viewall}
