@@ -22,7 +22,11 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: white;
+  background-image: linear-gradient(to bottom , rgba(216, 24, 24, 0), rgb(34, 8, 104));
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
@@ -67,9 +71,9 @@ body {
   padding-top: 400px;
   background-color: transparent;
   color: white;
-  background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%);
-  /* background-image: linear-gradient(to bottom, #0a374f , black 40%); */
+  /* background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%); */
 }
+/* background-image: linear-gradient(to bottom, #0a374f , black 40%); */
 
 
 
@@ -93,6 +97,40 @@ body {
 }
 
 
+
+@keyframes animation-box-experience {
+  from{
+    opacity: 0.8;
+    scale: 50%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.box-to-show-experience{
+  view-timeline-name: --text-showing;
+  view-timeline-axis: block;
+  animation-timeline: --text-showing;
+  animation-name: animation-box-experience;
+}
+
+
+
+@keyframes animation-out-screen {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: .8;
+  }
+}
+.box-out-from-screen{
+  view-timeline-name: --text-showing;
+  view-timeline-axis: block;
+  animation-timeline: --text-showing;
+  animation-name: animation-out-screen;
+}
 
 /* @keyframes animation-opacity-summary {
   from{
@@ -129,6 +167,6 @@ body {
   text-shadow: rgb(161, 161, 161) 3px 3px 1px;
 }
 
-.bg-color-gradient{
+/* .bg-color-gradient{
   background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%);
-}
+} */

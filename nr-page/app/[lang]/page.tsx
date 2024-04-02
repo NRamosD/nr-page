@@ -108,7 +108,7 @@ export default async function Home({ params: { lang } }: Props) {
 
 
       {/* --------------------------------------------------- SUMMARY ---------------------------------------------------*/}
-      <div id='summary' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 flex `}>
+      <div id='summary' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 flex box-out-from-screen`}>
         <SummarySection summary={intl.summary}/>
       </div>
 
@@ -117,7 +117,7 @@ export default async function Home({ params: { lang } }: Props) {
     {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
       <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 flex`}>
         <div className='grid gap-2 m-auto'>
-          <div className='w-[1000px] h-[600px] bg-black'>
+          <div className='w-[80vw] xl:w-[60vw] h-[600px] bg-black rounded-md'>
               <div className=" ">
                   <div>
                     qweq
@@ -133,8 +133,8 @@ export default async function Home({ params: { lang } }: Props) {
       {/* --------------------------------------------------- EXPERIENCE ---------------------------------------------------*/}
       <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20  `}>
         <h2 className="text-center text-5xl">EXPERIENCE</h2>
-        <div className='relative h-full overflow-y-auto border-y-4 border-white'>
-          <div className="grid grid-cols-10 gap-2 xl:gap-5">
+        <div className='relative h-[40vh] overflow-y-auto'>
+          <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience">
             <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
               <div className="grid p-5">
                 <p>I currently work here</p>
@@ -176,7 +176,7 @@ export default async function Home({ params: { lang } }: Props) {
 
           <hr/>
 
-          <div className="grid grid-cols-10 gap-2 xl:gap-5">
+          <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience">
             <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
               <div className="grid p-5">
                 <p>I also work as</p>
@@ -304,18 +304,19 @@ export default async function Home({ params: { lang } }: Props) {
         <div className='h-full grid grid-cols-10 gap-5 md:gap-10'>
           <div className='w-full col-span-10 md:col-span-6 m-auto'>
             <h2 className="text-5xl my-4 text-shadow-landing">ABOUT ME</h2>
-            <p className=" text-base md:text-2xl text-gray-600">
+            <p className=" text-base md:text-2xl text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet. Donec diam libero, ullamcorper in blandit vel, auctor id nisi. Quisque sed nisl eu erat sodales aliquet. Maecenas suscipit sem id suscipit mattis. Mauris eget pretium nisi. Nam nec fringilla quam. Quisque commodo pretium elementum. Aenean ultrices mi eu ullamcorper egestas. Suspendisse a neque ligula.
             </p>
           </div>
-          <div className='h-fit w-fit col-span-10 md:col-span-4 m-auto'>
+          <div className='h-fit w-fit col-span-10 md:col-span-4 m-auto relative'>
             <Image 
               src={meta}
               alt="me"
               width={500}
               height={500}
-              className=" h-[400px] object-cover rounded-lg shadow-xl shadow-[#927843] bg-white"
+              className=" h-[400px] object-cover rounded-lg shadow-xl shadow-gray-500 bg-white"
             />
+            <div className=" w-[100%] h-[400px] rounded-lg bg-gray-800 absolute -z-10 -top-4 -right-4"></div>
           </div>
         </div>
       </div>

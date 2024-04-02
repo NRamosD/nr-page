@@ -129,7 +129,7 @@ export const SummarySection = (props : {summary:any}) => {
                                     <Link 
                                         data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-offset="0"
                                         key={`item-course-certification-${index}`} target="_blank" href={item.url} 
-                                        className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
+                                        className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-md text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                                         <h3>
                                             {item.name}
                                         </h3>
@@ -177,7 +177,7 @@ export const SummarySection = (props : {summary:any}) => {
                         </Link> */}
                         <Link target="_blank" href={"https://www.linkedin.com/in/nix-ramos/details/certifications/"} 
                             data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="150"
-                            className="flex gap-2 sticky bottom-0 transition-all duration-500 ease-out px-4 py-2 shadow-xl text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
+                            className="flex gap-2 sticky bottom-0 transition-all duration-500 ease-out px-4 py-2 text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
                             <h3>
                             {props.summary.viewall}
                             </h3>
