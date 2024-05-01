@@ -15,6 +15,7 @@ import harvard from "@/public/assets/img/hardvard.png"
 import georgiatech from "@/public/assets/img/gt-logo.svg"
 import catpixel from "@/public/assets/img/catpixel.gif"
 import laptoppixel from "@/public/assets/img/laptoppixel.png"
+import { SlideVirtual } from './SlideVirtual';
 
 
 
@@ -79,28 +80,28 @@ export const SummarySection = (props : {summary:any}) => {
         <>
             <div className='grid grid-cols-1 gap-5 my-auto summary-section-to-show'>
                 <div data-aos="fade-up " 
-                    className='w-full grid md:grid-cols-6 text-[30px] md:text-[50px]'>
-                    <div className='my-auto grid gap-y-5 md:col-span-2 '>
-                        <div className='grid gap-y-2 justify-center text-shadow-landing'>
-                        <p className="">{props.summary.imfrom}</p>
+                    className='w-full grid md:grid-cols-6 text-[30px] md:text-[50px] bg-gradient-to-b from-[#081a25] to-transparent rounded-md'>
+                    <div className='my-auto grid gap-y-5 md:col-span-2 p-10'>
+                        <div className='grid gap-y-2 justify-center '>
+                        {/* <p className="">{props.summary.imfrom}</p> */}
                         <Image src={ecuador} alt="Ecuadorian" 
                             width={60} height={10}
                             title="Ecuador"
                             className="mx-auto"/>
                         </div>
-                        <hr className="mx-5"/>
-                        <div className="grid md:-space-y-5 mx-auto text-center text-shadow-landing">
+                        {/* <hr className="mx-5"/> */}
+                        <div className="grid md:-space-y-5 mx-auto text-center ">
                             <span>{props.summary.age}</span>
                             <span>24</span>
                         </div>
                     </div>
                     <div className='my-auto grid gap-y-5 md:col-span-4 '>
-                    <div className=' grid text-[20px] md:text-[35px] text-shadow-landing'>
+                    <div className=' grid text-[20px] md:text-[35px] '>
                         <span>
                         {props.summary.istudied}
                         </span>
                         <div className="flex">
-                        <p className="text-[18px] md:text-[26px] gradient-text-university">
+                        <p className="text-[18px] md:text-[26px]">
                             {props.summary.university}
                         </p>
                         <Link target="_blank" className="w-fit my-auto rounded-md bg-white ml-2" href={"https://www.espoch.edu.ec"}>
@@ -120,16 +121,17 @@ export const SummarySection = (props : {summary:any}) => {
                 <div className='w-full grid grid-cols-1 md:grid-cols-6 gap-5 text-[30px] md:text-[50px]'>
                     <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="150"  
                         className="md:col-span-6 text-left">
-                    <h3 className="text-[20px] md:text-[30px] text-shadow-landing">{props.summary.coursesandcertifications}</h3>
+                    <h3 className="text-[20px] md:text-[30px] ">{props.summary.coursesandcertifications}</h3>
                     </div>
-                    <div className="grid relative gap-2 md:col-span-3 p-2 text-[14px] md:text-[18px] max-h-[250px] overflow-y-auto">
+                    <div className="grid relative gap-2 md:col-span-3 p-2 text-[14px] md:text-[18px] max-h-[250px] overflow-y-auto ">
                         {
                             COURSES_AND_CERTIFICATIONS.map((item,index)=>{
                                 return(
                                     <Link 
                                         data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-offset="0"
                                         key={`item-course-certification-${index}`} target="_blank" href={item.url} 
-                                        className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-md text-black bg-white rounded-md hover:translate-x-2 hover:bg-slate-300">
+                                        className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-md text-black bg-white rounded-md 
+                                        hover:translate-x-2 hover:bg-slate-300 border-2 border-slate-500">
                                         <h3>
                                             {item.name}
                                         </h3>
@@ -187,8 +189,12 @@ export const SummarySection = (props : {summary:any}) => {
                     </div>
                     <div
                         data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="150" 
-                        className="md:col-span-3 grid grid-cols-3 p-2">
-                        <div>
+                        className="md:col-span-3 grid grid-cols-3 p-2 bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
+                            <div className='col-span-3'>
+                                <SlideVirtual/>
+
+                            </div>
+                        {/* <div>
                             <Image src={freecodecamp}
                             alt="freecodecamp"
                             width={100} height={50}
@@ -221,7 +227,7 @@ export const SummarySection = (props : {summary:any}) => {
                             width={100} height={50}
                             className=""
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

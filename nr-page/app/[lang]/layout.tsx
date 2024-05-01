@@ -42,8 +42,8 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head> */}
       <body className={`${font1.className}`}>
-        <header className='transition-all duration-500 ease-out navbar w-full grid justify-center fixed bottom-0 left-0 shadow-2xl z-20 border-b-2 border-[#ffffff] hover:-translate-y-0 translate-y-28 hover:bg-black hover:border-t-2 '>
-          <span className='block w-fit bg-black rounded-md px-3 py-1'>Menu</span>
+        <header className='transition-all duration-500 ease-out navbar w-fit grid  fixed bottom-0 left-0 shadow-2xl z-20 border-b-2 border-[#ffffff] hover:-translate-y-0 translate-y-28 hover:bg-black hover:border-t-2 hover:border-r-2 rounded-tr-md'>
+          <span className='block w-fit bg-black rounded-md px-3 py-1 mx-3'>Menu</span>
           <NavBar lang={lang} />
         </header>
         {children}

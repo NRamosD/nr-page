@@ -70,7 +70,7 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-gradient-to-r from-[#081a25] via-teal-600 to-sky-800">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-gradient-to-r from-[#081a25] via-teal-600 to-sky-900">
       
       {/* --------------------------------------------------- START -----------------------------------------0a374f----------*/}
 
