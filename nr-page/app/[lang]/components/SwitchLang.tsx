@@ -41,15 +41,15 @@ const SwitchLang: FC<Props> = () => {
   return (
     
 
-      <div className='grid grid-cols-1 gap-2 w-full p-1  text-white bg-[#000] rounded-md'>
-        <button className={`rounded-md transition-all duration-500 ${selectedLang==1?"hidden":"showElementEnglish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('en')}>
+      <div className='grid grid-cols-1 text-center justify-center gap-2 w-fit p-1  text-white bg-[#000] rounded-md '>
+        <button className={`mx-auto rounded-md transition-all duration-500 ${selectedLang==1?"hidden":"showElementEnglish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('en')}>
           <span>Inglés</span>
           <span className="flex h-full">
             <Image src={english} width={45} height={45} alt="Spanish Language"
               className="w-7 m-auto"/>
           </span>
         </button>
-        <button className={`rounded-md transition-all duration-500 ${selectedLang==0?"hidden":"showElementSpanish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('es')}>
+        <button className={`mx-auto rounded-md transition-all duration-500 ${selectedLang==0?"hidden":"showElementSpanish"} flex justify-center gap-x-2 px-2 py-1 border-2 border-white hover:bg-white hover:text-black`} onClick={() => switchLang('es')}>
           <span>Spanish</span>
           <span className="flex h-full">
             <Image src={spanish} width={45} height={45} alt="English Language"

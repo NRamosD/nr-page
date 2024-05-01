@@ -70,7 +70,7 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-color-gradient">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-gradient-to-r from-[#081a25] via-teal-600 to-sky-800">
       
       {/* --------------------------------------------------- START -----------------------------------------0a374f----------*/}
 
@@ -321,27 +321,7 @@ export default async function Home({ params: { lang } }: Props) {
         </div>
       </div>
     </main>
-    <footer className='gradient-bg h-[20vh] flex relative'>
-      <div className='m-auto grid text-white '>
-        <div className="text-to-show grid text-5xl text-shadow-landing">
-          <h3 className="text-center" >Cooked with</h3>
-          <span className="text-center" >❤️</span>
-          <h3 className="text-center" >By Nixon Ramos</h3>
-        </div>
-        <div className="m-auto text-to-show grid grid-cols-1 text-2xl text-gray-500">
-            <span className="text-center text-white">.</span>
-            <Link href={"#"} className="transition-all duration-500 hover:text-black hover:underline text-center">Reach out me</Link>
-            <span className="text-center text-white">.</span>
-            <Link href={"#"} className="transition-all duration-500 hover:text-black hover:underline text-center">Linkedin</Link>
-            <span className="text-center text-white">.</span>
-            <Link href={"#"} className="transition-all duration-500 hover:text-black hover:underline text-center">GitHub</Link>
-        </div>
-      </div>
-      <div className="text-center absolute bottom-0 right-0 left-0 text-black">
-        <h4 className="text-center">©{new Date().getUTCFullYear()} NixR.dev</h4>
-        <h4 className="text-center">All rights reserved.</h4>
-      </div>
-    </footer> 
+    
    
   </>
   )
