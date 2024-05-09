@@ -28,5 +28,35 @@
         "angularrouting":"Angular Routing",
         "viewall":"View All"
 
-    }
+    },
+    "experience":[
+        {
+            "imfrom":"Soy de",
+            "age":"Edad",
+            "istudied":"Me gradue en la",
+            "university":"Escuela Superior Politécnica de Chimborazo",
+            "as":"como",
+            "profession":"Ingeniero de Software",
+            "coursesandcertifications":"Cursos y Certificaciones",
+            "specializationfrontmeta":"Especialización en Desarrollo Front-End para Meta",
+            "harvardcs50py":"Programación Web con Python y JavaScript de Harvard (CS50)",
+            "csharpnet":"C# para Desarrolladores .NET",
+            "angularrouting":"Enrutamiento en Angular",
+            "viewall":"Ver todas"
+        },
+        {
+            "imfrom":"Soy de",
+            "age":"Edad",
+            "istudied":"Me gradue en la",
+            "university":"Escuela Superior Politécnica de Chimborazo",
+            "as":"como",
+            "profession":"Ingeniero de Software",
+            "coursesandcertifications":"Cursos y Certificaciones",
+            "specializationfrontmeta":"Especialización en Desarrollo Front-End para Meta",
+            "harvardcs50py":"Programación Web con Python y JavaScript de Harvard (CS50)",
+            "csharpnet":"C# para Desarrolladores .NET",
+            "angularrouting":"Enrutamiento en Angular",
+            "viewall":"Ver todas"
+        }
+    ]
 }

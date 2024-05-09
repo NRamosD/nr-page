@@ -24,6 +24,7 @@ import 'aos/dist/aos.css';
 import { RadarChart } from "./components/RadarChart.tsx"
 import { StartSection } from "./components/StartSection.tsx"
 import { SummarySection } from "./components/SummarySection.tsx"
+import { WorkPositionComponent } from "./components/WorkPositionComponent.tsx"
 
 
 
@@ -70,7 +71,7 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-gradient-to-r from-[#081a25] via-teal-600 to-sky-900">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-gradient-to-r from-[#081a25] via-teal-600 to-teal-600">
       
       {/* --------------------------------------------------- START -----------------------------------------0a374f----------*/}
 
@@ -133,7 +134,8 @@ export default async function Home({ params: { lang } }: Props) {
       {/* --------------------------------------------------- EXPERIENCE ---------------------------------------------------*/}
       <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20  `}>
         <h2 className="text-center text-5xl">EXPERIENCE</h2>
-        <div className='relative h-[40vh] overflow-y-auto'>
+        <WorkPositionComponent experience={intl.experience}/>
+        <div className='relative h-[80vh] overflow-y-auto'>
           <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience">
             <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
               <div className="grid p-5">
