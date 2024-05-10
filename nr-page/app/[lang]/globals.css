@@ -193,3 +193,10 @@ body {
   -o-transition-timing-function:linear!important;
   transition-timing-function:linear!important; 
 }
+
+/*SHADOW FOR MY PICTURE*/
+.shadowed-me{
+  border-bottom: 2px solid #443503a6;
+  border-right: 2px solid #443503a6;
+  box-shadow: 20px 20px 40px 5px rgba(255, 255, 255, 0.5);
+}

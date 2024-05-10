@@ -193,13 +193,15 @@ export default async function Home({ params: { lang } }: Props) {
       </div>
 
 
-      <div id='about' className={`h-[100vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 p-5`}>
+      <div id='about' className={`h-[60vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 p-5`}>
         <div className='h-full grid grid-cols-10 gap-5 md:gap-10'>
           <div className='w-full col-span-10 md:col-span-6 m-auto'>
-            <h2 className="text-5xl my-4 text-shadow-landing">ABOUT ME</h2>
-            <p className=" text-base md:text-2xl text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet. Donec diam libero, ullamcorper in blandit vel, auctor id nisi. Quisque sed nisl eu erat sodales aliquet. Maecenas suscipit sem id suscipit mattis. Mauris eget pretium nisi. Nam nec fringilla quam. Quisque commodo pretium elementum. Aenean ultrices mi eu ullamcorper egestas. Suspendisse a neque ligula.
-            </p>
+            <h2 className="text-5xl my-4 text-shadow-landing pb-40">ABOUT ME</h2>
+            <div className="bg-white rounded-md p-4 shadow-md shadow-gray-800">
+              <p className="  text-base md:text-xl text-black ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet. Donec diam libero, ullamcorper in blandit vel, auctor id nisi. Quisque sed nisl eu erat sodales aliquet. Maecenas suscipit sem id suscipit mattis. Mauris eget pretium nisi. Nam nec fringilla quam. Quisque commodo pretium elementum. Aenean ultrices mi eu ullamcorper egestas. Suspendisse a neque ligula.
+              </p>
+            </div>
           </div>
           <div className='h-fit w-fit col-span-10 md:col-span-4 m-auto relative'>
             <Image 
@@ -207,18 +209,18 @@ export default async function Home({ params: { lang } }: Props) {
               alt="me"
               width={500}
               height={500}
-              className=" h-[400px] object-cover rounded-lg shadow-md shadow-gray-500 bg-white"
+              className=" h-[400px] object-cover rounded-lg shadowed-me bg-white"
             />
             
-            <div className=" w-[100%] h-[400px] rounded-lg bg-gray-300 absolute -z-10 -top-4 -right-4">
+            {/* <div className=" w-[100%] h-[400px] rounded-lg bg-[#8b8b8b62] absolute -z-10 -top-4 -right-4">
               <Image 
                 src={meta}
                 alt="me"
                 width={500}
                 height={500}
-                className=" h-[400px] object-cover rounded-lg shadow-xl shadow-gray-500 bg-white blur-sm"
+                className=" h-[400px] object-cover rounded-lg bg-white blur-md"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
