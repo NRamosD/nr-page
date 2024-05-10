@@ -22,6 +22,8 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
+  background-image: linear-gradient(to bottom, #081a25 , #0A4548);
+  background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
@@ -68,7 +70,6 @@ body {
   color: white;
   /* background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%); */
 }
-/* background-image: linear-gradient(to bottom, #0a374f , black 40%); */
 
 
 
@@ -165,3 +166,30 @@ body {
 /* .bg-color-gradient{
   background: linear-gradient(90deg, rgba(224,216,170,1) 0%, rgba(228,219,159,1) 50%, rgba(146,120,67,1) 100%);
 } */
+
+
+
+
+
+/* INFINITE SWIPPER */
+.swiper-container {
+  margin: 60px;
+}
+.swiper-slide {
+  width: 28vw;
+  overflow: hidden;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper-wrapper {
+  -webkit-transition-timing-function:linear!important; 
+  -o-transition-timing-function:linear!important;
+  transition-timing-function:linear!important; 
+}

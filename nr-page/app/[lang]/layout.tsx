@@ -47,7 +47,7 @@ export default function RootLayout({
           <NavBar lang={lang} />
         </header>
         {children}
-        <footer className='gradient-bg h-[20vh] flex relative bg-gradient-to-r from-[#081a25] via-teal-600 to-teal-600'>
+        <footer className='gradient-bg h-[20vh] flex relative'>
           <div className='m-auto grid text-white '>
             <div className="text-to-show grid text-5xl text-shadow-landing">
               <h3 className="text-center" >Cooked with</h3>

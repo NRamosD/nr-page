@@ -10,12 +10,12 @@ export const SlideVirtual = () => {
   const slides = Array.from({ length: 10 }).map(
     (el, index) => `Slide ${index + 1}`
   );
-
+  
   return (
-    <Swiper modules={[Autoplay, Virtual, FreeMode]} 
+    <Swiper className='swiper-container' modules={[Autoplay, Virtual, FreeMode]} 
         slidesPerView={3}
-        spaceBetween={50}  
-        virtual={true} 
+        spaceBetween={0}  
+        virtual={true}
         freeMode={true}
         loop = {true}
         autoplay = {{
@@ -23,15 +23,16 @@ export const SlideVirtual = () => {
             "disableOnInteraction": false,
             // "pauseOnMouseEnter": false,
             // "stopOnLastSlide": false,
-            "waitForTransition": true
+            //"waitForTransition": true
         }}
         mousewheel= {true}
         keyboard= {true}
         speed={2000}
         grabCursor = {true}
+        oneWayMovement
     >
       {slides.map((slideContent, index) => (
-        <SwiperSlide key={slideContent} virtualIndex={index}>
+        <SwiperSlide className='swiper-slide' key={slideContent} virtualIndex={index}>
           {slideContent}
         </SwiperSlide>
       ))}

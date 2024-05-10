@@ -71,7 +71,7 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-gradient-to-r from-[#081a25] via-teal-600 to-teal-600">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 ">
       
       {/* --------------------------------------------------- START -----------------------------------------0a374f----------*/}
 
@@ -118,12 +118,53 @@ export default async function Home({ params: { lang } }: Props) {
     {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
       <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 flex`}>
         <div className='grid gap-2 m-auto'>
-          <div className='w-[80vw] xl:w-[60vw] h-[600px] bg-black rounded-md'>
-              <div className=" ">
-                  <div>
+          <div className='grid grid-cols-4 gap-x-10 w-[80vw] xl:w-[60vw] h-[600px] rounded-md'>
+              <div className=" h-full col-span-2 ">
+                  <div className="h-20 w-full flex">
+                    <h2 className=" text-[1.9em] text-center m-auto">
+                      Frontend
+                    </h2>
+                  </div>
+                  <div className=" h-[40rem] bg-white rounded-md">
                     qweq
 
                   </div>
+              </div>
+              <div className="h-full col-span-2 grid grid-cols-2 grid-rows-2 gap-4">
+                <div className=" col-span-1 row-span-1">
+                    <div className=" h-80 bg-white rounded-md">
+                      qweq
+
+                    </div>
+                    <div className="h-20 w-full flex">
+                      <h2 className=" text-[1.9em] text-center m-auto">
+                        Backend
+                      </h2>
+                    </div>
+                </div>
+                <div className=" col-span-1 row-span-1">
+                    <div className="h-20 w-full flex">
+                      <h2 className=" text-[1.9em] text-center m-auto">
+                        Servers and Cloud
+                      </h2>
+                    </div>
+                    <div className="h-80 bg-white rounded-md">
+                      qweq
+
+                    </div>
+                </div>
+                <div className=" col-span-2 row-span-2">
+                    <div className="h-80 bg-white rounded-md">
+                      qweq
+
+                    </div>
+                    <div className="h-20 w-full flex">
+                      <h2 className=" text-[1.9em] text-center m-auto">
+                        Other Skills
+                      </h2>
+                    </div>
+                </div>
+
               </div>
           </div>
         </div>
@@ -133,170 +174,20 @@ export default async function Home({ params: { lang } }: Props) {
 
       {/* --------------------------------------------------- EXPERIENCE ---------------------------------------------------*/}
       <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20  `}>
-        <h2 className="text-center text-5xl">EXPERIENCE</h2>
-        <WorkPositionComponent experience={intl.experience}/>
+        <h2 className="text-5xl">EXPERIENCE</h2>
         <div className='relative h-[80vh] overflow-y-auto'>
-          <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience">
-            <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
-              <div className="grid p-5">
-                <p>I currently work here</p>
-                <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                  <h2 className=" text-xl">Responsible Travel SA</h2>
-                  <h3 className="text-sm font-light">From May 2023 until Now</h3>
-                  <h3 className="text-sm font-light mt-2">Position in the Company:</h3>
-                  <h3 className=" text-xl font-extrabold">Web Developer</h3>
-                </div>
-              </div>
-            </div>
-            <div className='h-fit w-full row-span-1 md:row-span-1 col-span-10 md:col-span-7 py-2 xl:py-10 px-2'>
-              <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                <div className="py-2">
-                  <h3 className=" font-bold">What I did here?</h3>
-                  <p>ajkshd kjash kjdhkjas hdkj haskh d</p>
-                </div>
-                <div className="py-2">
-                  <h3 className=" font-bold">Projects</h3>
-                  <ul className="list-disc mx-5">
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <span><Link href={"#"} className="underline flex">Take a view <Image src={externallink} width={15} height={15} alt="Take a view"/> </Link></span>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <WorkPositionComponent experience={intl.experience}/>
           <hr/>
-
-          <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience">
-            <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
-              <div className="grid p-5">
-                <p>I also work as</p>
-                <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                  <h2 className=" text-xl">Software Engineer Freelancer</h2>
-                  <h3 className="text-sm font-light">From May 2019 until Now</h3>
-                  
-                </div>
-              </div>
-            </div>
-            <div className='h-fit w-full row-span-1 md:row-span-1 col-span-10 md:col-span-7 py-2 xl:py-10 px-2'>
-              <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                <div className="py-2">
-                  <h3 className=" font-bold">What I did here?</h3>
-                  <p>ajkshd kjash kjdhkjas hdkj haskh d</p>
-                </div>
-                <div className="py-2">
-                  <h3 className=" font-bold">Projects</h3>
-                  <ul className="list-disc mx-5">
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <span><Link href={"#"} className="underline flex">Take a view <Image src={externallink} width={15} height={15} alt="Take a view"/> </Link></span>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+          <WorkPositionComponent experience={intl.experience}/>
           <hr/>
-
-          <div className="grid grid-cols-10 gap-2 xl:gap-5">
-            <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
-              <div className="grid p-5">
-                <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                  <h2 className=" text-xl">Responsible Travel SA</h2>
-                  <h3 className="text-sm font-light">From May 2023 until Now</h3>
-                  <h3 className="text-sm font-light mt-2">Position in the Company:</h3>
-                  <h3 className=" text-xl font-extrabold">Web Developer</h3>
-                </div>
-              </div>
-            </div>
-            <div className='h-fit w-full row-span-1 md:row-span-1 col-span-10 md:col-span-7 py-2 xl:py-10 px-2'>
-              <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                <div className="py-2">
-                  <h3 className=" font-bold">What I did here?</h3>
-                  <p>ajkshd kjash kjdhkjas hdkj haskh d</p>
-                </div>
-                <div className="py-2">
-                  <h3 className=" font-bold">Projects</h3>
-                  <ul className="list-disc mx-5">
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <span><Link href={"#"} className="underline flex">Take a view <Image src={externallink} width={15} height={15} alt="Take a view"/> </Link></span>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+          <WorkPositionComponent experience={intl.experience}/>
           <hr/>
-
-          <div className="grid grid-cols-10 gap-2 xl:gap-5">
-            <div className='h-full w-full row-span-1 md:row-span-1 col-span-10 md:col-span-3'>
-              <div className="grid p-5">
-                <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                  <h2 className=" text-xl">Responsible Travel SA</h2>
-                  <h3 className="text-sm font-light">From May 2023 until Now</h3>
-                  <h3 className="text-sm font-light mt-2">Position in the Company:</h3>
-                  <h3 className=" text-xl font-extrabold">Web Developer</h3>
-                </div>
-              </div>
-            </div>
-            <div className='h-fit w-full row-span-1 md:row-span-1 col-span-10 md:col-span-7 py-2 xl:py-10 px-2'>
-              <div className="h-full w-full text-black bg-white p-4 rounded-lg shadow-md shadow-black">
-                <div className="py-2">
-                  <h3 className=" font-bold">What I did here?</h3>
-                  <p>ajkshd kjash kjdhkjas hdkj haskh d</p>
-                </div>
-                <div className="py-2">
-                  <h3 className=" font-bold">Projects</h3>
-                  <ul className="list-disc mx-5">
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <span><Link href={"#"} className="underline flex">Take a view <Image src={externallink} width={15} height={15} alt="Take a view"/> </Link></span>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                    <li className="px-2">
-                      <h4 className=" font-semibold">Name of the project</h4>
-                      <p>text about what i did in this project</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <WorkPositionComponent experience={intl.experience}/>
+          <hr/>
+          <WorkPositionComponent experience={intl.experience}/>
+          <hr/>
+          <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience h-80">
+            
           </div>
         </div>
       </div>
@@ -316,9 +207,18 @@ export default async function Home({ params: { lang } }: Props) {
               alt="me"
               width={500}
               height={500}
-              className=" h-[400px] object-cover rounded-lg shadow-xl shadow-gray-500 bg-white"
+              className=" h-[400px] object-cover rounded-lg shadow-md shadow-gray-500 bg-white"
             />
-            <div className=" w-[100%] h-[400px] rounded-lg bg-gray-800 absolute -z-10 -top-4 -right-4"></div>
+            
+            <div className=" w-[100%] h-[400px] rounded-lg bg-gray-300 absolute -z-10 -top-4 -right-4">
+              <Image 
+                src={meta}
+                alt="me"
+                width={500}
+                height={500}
+                className=" h-[400px] object-cover rounded-lg shadow-xl shadow-gray-500 bg-white blur-sm"
+              />
+            </div>
           </div>
         </div>
       </div>
