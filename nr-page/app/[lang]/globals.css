@@ -27,7 +27,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -199,4 +199,12 @@ body {
   border-bottom: 2px solid #443503a6;
   border-right: 2px solid #443503a6;
   box-shadow: 20px 20px 40px 5px rgba(255, 255, 255, 0.5);
+}
+
+
+/*VERTICAL TEXT*/
+.vertical-text {
+  writing-mode: vertical-rl; /* vertical right-to-left */
+  text-orientation: upright; /* upright text */
+  white-space: nowrap; /* prevents text from wrapping */
 }

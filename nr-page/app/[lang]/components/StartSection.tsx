@@ -26,7 +26,7 @@ export const StartSection = (props : {landing:any}) => {
     return(
         <>
             <div className=' my-auto '>
-              <div className={`transition-all duration-500 -space-y-10 ${myName?"translate-y-0 opacity-1":"translate-y-20 opacity-0"}`}>
+              <div className={`transition-all px-2 duration-500 -space-y-10 ${myName?"translate-y-0 opacity-1":"translate-y-20 opacity-0"}`}>
                 <span className='text-[50px] p-0'>{props.landing.im}</span>
                 <h1 className='text-[100px] p-0 uppercase text-shadow-landing'>{props.landing.name}</h1>
                 <h2 className='text-[20px] p-0 uppercase text-yellow-400'>{props.landing.profession}</h2>
@@ -38,7 +38,7 @@ export const StartSection = (props : {landing:any}) => {
                   <Image src={catpixel} alt="cat pixel" width={100} height={60} className="mb-2"/>
                 </div>
               </div>
-              <p className={`transition-all duration-500 ${textToStart?"translate-y-0 opacity-1":"-translate-y-20 opacity-0"} text-[40px] uppercase`}>{`${props.landing.welcome.split("!")[1]}`}</p>
+              <p className={`transition-all duration-500 ${textToStart?"translate-y-0 opacity-1":"-translate-y-20 opacity-0"} text-[28px] xl:text-2xl`}>{`${props.landing.welcome.split("!")[1]}`}</p>
               <a href='#summary' className={`transition-all animate-bounce duration-500  ${startRead?"opacity-1":"opacity-0"} text-[40px] uppercase`}>{`${props.landing.start}`}<div className='animate-bounce text-white'>↓</div></a>
             </div>
         

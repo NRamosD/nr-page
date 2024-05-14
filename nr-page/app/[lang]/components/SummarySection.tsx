@@ -96,7 +96,7 @@ export const SummarySection = (props : {summary:any}) => {
                         </div>
                     </div>
                     <div className='my-auto grid gap-y-5 md:col-span-4 '>
-                    <div className=' grid text-[20px] md:text-[35px] '>
+                    <div className='grid text-[20px] md:text-[35px] px-4 xl:px-0'>
                         <span>
                         {props.summary.istudied}
                         </span>

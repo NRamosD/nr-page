@@ -118,43 +118,43 @@ export default async function Home({ params: { lang } }: Props) {
     {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
       <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 flex`}>
         <div className='grid gap-2 m-auto'>
-          <div className='grid grid-cols-4 gap-x-10 w-[80vw] xl:w-[60vw] h-[600px] rounded-md'>
-              <div className=" h-full col-span-2 ">
+          <div className='grid xl:grid-cols-4 gap-10 w-[80vw] xl:w-[60vw] h-[700px] xl:h-[600px] rounded-md'>
+              <div className="h-full xl:col-span-2 ">
                   <div className="h-20 w-full flex">
                     <h2 className=" text-[1.9em] text-center m-auto">
                       Frontend
                     </h2>
                   </div>
-                  <div className=" h-[40rem] bg-white rounded-md">
+                  <div className="h-[16rem] xl:h-[40rem] bg-white rounded-md">
                     qweq
 
                   </div>
               </div>
-              <div className="h-full col-span-2 grid grid-cols-2 grid-rows-2 gap-4">
+              <div className="h-full xl:col-span-2 grid grid-cols-2 grid-rows-2 gap-4">
                 <div className=" col-span-1 row-span-1">
-                    <div className=" h-80 bg-white rounded-md">
+                    <div className="h-20 xl:h-80 bg-white rounded-md">
                       qweq
 
                     </div>
                     <div className="h-20 w-full flex">
-                      <h2 className=" text-[1.9em] text-center m-auto">
+                      <h2 className=" text-[1.6em] text-center m-auto">
                         Backend
                       </h2>
                     </div>
                 </div>
                 <div className=" col-span-1 row-span-1">
                     <div className="h-20 w-full flex">
-                      <h2 className=" text-[1.9em] text-center m-auto">
+                      <h2 className="text-[1.5em] xl:text-[1.9em] text-center m-auto">
                         Servers and Cloud
                       </h2>
                     </div>
-                    <div className="h-80 bg-white rounded-md">
+                    <div className="h-20 xl:h-80 bg-white rounded-md">
                       qweq
 
                     </div>
                 </div>
-                <div className=" col-span-2 row-span-2">
-                    <div className="h-80 bg-white rounded-md">
+                <div className=" col-span-2 xl:col-span-2 row-span-2">
+                    <div className="h-20 xl:h-80 bg-white rounded-md">
                       qweq
 
                     </div>
@@ -173,9 +173,10 @@ export default async function Home({ params: { lang } }: Props) {
 
 
       {/* --------------------------------------------------- EXPERIENCE ---------------------------------------------------*/}
-      <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20  `}>
-        <h2 className="text-5xl">EXPERIENCE</h2>
-        <div className='relative h-[80vh] overflow-y-auto'>
+      <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20 xl:flex  `}>
+        <h2 className=" p-5 text-5xl xl:hidden">EXPERIENCE</h2>
+        <h2 className=" px-5 text-6xl vertical-text hidden xl:block">EXPERIENCE</h2>
+        <div className='relative h-[80vh] overflow-y-auto border-[20px] border-double'>
           <WorkPositionComponent experience={intl.experience}/>
           <hr/>
           <WorkPositionComponent experience={intl.experience}/>
@@ -186,8 +187,10 @@ export default async function Home({ params: { lang } }: Props) {
           <hr/>
           <WorkPositionComponent experience={intl.experience}/>
           <hr/>
-          <div className="grid grid-cols-10 gap-2 xl:gap-5 box-to-show-experience h-80">
-            
+          <div className="grid box-to-show-experience h-80 ">
+            <h3 className="text-[4.5em] m-auto text-shadow-landing">
+              New adventures await!
+            </h3>
           </div>
         </div>
       </div>
@@ -195,12 +198,14 @@ export default async function Home({ params: { lang } }: Props) {
 
       <div id='about' className={`h-[60vh] w-[90vw] md:w-[80vw] xl:w-[60vw] mb-20 p-5`}>
         <div className='h-full grid grid-cols-10 gap-5 md:gap-10'>
-          <div className='w-full col-span-10 md:col-span-6 m-auto'>
-            <h2 className="text-5xl my-4 text-shadow-landing pb-40">ABOUT ME</h2>
-            <div className="bg-white rounded-md p-4 shadow-md shadow-gray-800">
-              <p className="  text-base md:text-xl text-black ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet. Donec diam libero, ullamcorper in blandit vel, auctor id nisi. Quisque sed nisl eu erat sodales aliquet. Maecenas suscipit sem id suscipit mattis. Mauris eget pretium nisi. Nam nec fringilla quam. Quisque commodo pretium elementum. Aenean ultrices mi eu ullamcorper egestas. Suspendisse a neque ligula.
-              </p>
+          <div className='w-full col-span-10 md:col-span-6 align-text-bottom relative'>
+            <div className=" md:absolute bottom-0">
+              <h2 className="text-5xl my-4 text-shadow-landing">And about me...</h2>
+              <div className=" rounded-md p-4">
+                <p className="text-base md:text-xl text-white ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet.
+                </p>
+              </div>
             </div>
           </div>
           <div className='h-fit w-fit col-span-10 md:col-span-4 m-auto relative'>
@@ -209,7 +214,7 @@ export default async function Home({ params: { lang } }: Props) {
               alt="me"
               width={500}
               height={500}
-              className=" h-[400px] object-cover rounded-lg shadowed-me bg-white"
+              className=" h-[400px] object-cover rounded-lg xl:shadowed-me bg-white"
             />
             
             {/* <div className=" w-[100%] h-[400px] rounded-lg bg-[#8b8b8b62] absolute -z-10 -top-4 -right-4">
