@@ -116,7 +116,7 @@ export default async function Home({ params: { lang } }: Props) {
 
 
     {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
-      <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-20 flex`}>
+      <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-80 flex`}>
         <div className='grid gap-2 m-auto'>
           <div className='grid xl:grid-cols-4 gap-10 w-[80vw] xl:w-[60vw] h-[700px] xl:h-[600px] rounded-md'>
               <div className="h-full xl:col-span-2 ">
@@ -143,8 +143,8 @@ export default async function Home({ params: { lang } }: Props) {
                     </div>
                 </div>
                 <div className=" col-span-1 row-span-1">
-                    <div className="h-20 w-full flex">
-                      <h2 className="text-[1.5em] xl:text-[1.9em] text-center m-auto">
+                    <div className="h-24 w-full flex">
+                      <h2 className="text-[1.5em] xl:text-[1.7em] text-center m-auto ">
                         Servers and Cloud
                       </h2>
                     </div>
@@ -175,7 +175,7 @@ export default async function Home({ params: { lang } }: Props) {
       {/* --------------------------------------------------- EXPERIENCE ---------------------------------------------------*/}
       <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20 xl:flex  `}>
         <h2 className=" p-5 text-5xl xl:hidden">EXPERIENCE</h2>
-        <h2 className=" px-5 text-6xl vertical-text hidden xl:block">EXPERIENCE</h2>
+        <h2 className=" px-5 xl:text-5xl 2xl:text-6xl vertical-text hidden xl:block">EXPERIENCE</h2>
         <div className='relative h-[80vh] overflow-y-auto border-[20px] border-double'>
           <WorkPositionComponent experience={intl.experience}/>
           <hr/>
@@ -210,7 +210,7 @@ export default async function Home({ params: { lang } }: Props) {
           </div>
           <div className='h-fit w-fit col-span-10 md:col-span-4 m-auto relative'>
             <Image 
-              src={meta}
+              src={""}
               alt="me"
               width={500}
               height={500}

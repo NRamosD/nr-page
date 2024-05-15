@@ -5,10 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/virtual';
 
-export const SlideVirtual = () => {
+export const SlideVirtual = (props:{imagesStack: Array<object>}) => {
+  
   // Create array with 1000 slides
   const slides = Array.from({ length: 10 }).map(
     (el, index) => `Slide ${index + 1}`
+    
   );
   
   return (

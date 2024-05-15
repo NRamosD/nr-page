@@ -8,15 +8,26 @@ import 'aos/dist/aos.css';
 
 import ecuador from "@/public/assets/img/banderaecuador.svg"
 import externallink from "@/public/assets/img/externallinksvgrepo.svg"
-import freecodecamp from "@/public/assets/img/freecodecamp.svg"
-import google from "@/public/assets/img/google.png"
-import meta from "@/public/assets/img/meta.png"
-import harvard from "@/public/assets/img/hardvard.png"
-import georgiatech from "@/public/assets/img/gt-logo.svg"
-import catpixel from "@/public/assets/img/catpixel.gif"
-import laptoppixel from "@/public/assets/img/laptoppixel.png"
+
+import awslogo from "../../../public/assets/img/brand certifications/aws-svgrepo-com.svg"
+import freecodecamplogo from "../../../public/assets/img/brand certifications/freecodecamp.svg"
+import georgitechlogo from "../../../public/assets/img/brand certifications/georgiainstitute.png"
+import googlelogo from "../../../public/assets/img/brand certifications/google.png"
+import hardvardlogo from "../../../public/assets/img/brand certifications/hardvard.png"
+import metalogo from "../../../public/assets/img/brand certifications/meta.png"
+import ucdavislogo from "../../../public/assets/img/brand certifications/ucdavis.png"
 import { SlideVirtual } from './SlideVirtual';
 
+
+const brandCertifications = [
+    awslogo,
+    freecodecamplogo,
+    georgitechlogo,
+    googlelogo,
+    hardvardlogo,
+    metalogo,
+    ucdavislogo
+]
 
 
 export const SummarySection = (props : {summary:any}) => {
@@ -25,6 +36,10 @@ export const SummarySection = (props : {summary:any}) => {
         {
             name:props.summary.specializationfrontmeta,
             url:"https://www.coursera.org/account/accomplishments/specialization/8UKZ8DUMEAAB",
+        },
+        {
+            name:props.summary.specializationseoucdavis,
+            url:"https://coursera.org/share/306189e49f03c17163f363bbf21ce550"
         },
         {
             name:props.summary.harvardcs50py,
@@ -191,43 +206,9 @@ export const SummarySection = (props : {summary:any}) => {
                         data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="150" 
                         className="md:col-span-3 grid grid-cols-3 p-2 bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
                             <div className='col-span-3'>
-                                <SlideVirtual/>
+                                <SlideVirtual imagesStack={brandCertifications}/>
 
                             </div>
-                        {/* <div>
-                            <Image src={freecodecamp}
-                            alt="freecodecamp"
-                            width={100} height={50}
-                            />
-                        </div>
-                        <div className=" ">
-                            <Image src={google}
-                            alt="google"
-                            width={30} height={50}
-                            className=""
-                            />
-                        </div>
-                        <div className=" bg-white w-fit h-fit p-2">
-                            <Image src={harvard}
-                            alt="harvard"
-                            width={100} height={50}
-                            className=""
-                            />
-                        </div>
-                        <div className=" bg-white w-fit h-fit">
-                            <Image src={meta}
-                            alt="meta"
-                            width={100} height={50}
-                            className=""
-                            />
-                        </div>
-                        <div>
-                            <Image src={georgiatech}
-                            alt="georgiatech"
-                            width={100} height={50}
-                            className=""
-                            />
-                        </div> */}
                     </div>
                 </div>
             </div>
