@@ -9,8 +9,8 @@ import 'aos/dist/aos.css';
 import ecuador from "@/public/assets/img/banderaecuador.svg"
 import externallink from "@/public/assets/img/externallinksvgrepo.svg"
 
-import awslogo from "../../../public/assets/img/brand certifications/aws-svgrepo-com.svg"
-import freecodecamplogo from "../../../public/assets/img/brand certifications/freecodecamp.svg"
+import awslogo from "../../../public/assets/img/brand certifications/aws.png"
+import freecodecamplogo from "../../../public/assets/img/brand certifications/freecodecamp.png"
 import georgitechlogo from "../../../public/assets/img/brand certifications/georgiainstitute.png"
 import googlelogo from "../../../public/assets/img/brand certifications/google.png"
 import hardvardlogo from "../../../public/assets/img/brand certifications/hardvard.png"
@@ -20,13 +20,18 @@ import { SlideVirtual } from './SlideVirtual';
 
 
 const brandCertifications = [
-    awslogo,
-    freecodecamplogo,
+    // awslogo,
+    // freecodecamplogo,
     georgitechlogo,
     googlelogo,
     hardvardlogo,
     metalogo,
-    ucdavislogo
+    ucdavislogo,
+    freecodecamplogo,
+    googlelogo,
+    hardvardlogo,
+    metalogo,
+    awslogo,
 ]
 
 

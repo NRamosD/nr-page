@@ -176,7 +176,7 @@ body {
   margin: 60px;
 }
 .swiper-slide {
-  width: 28vw;
+  width: 50px;
   overflow: hidden;
   background-position: top;
   background-size: cover;

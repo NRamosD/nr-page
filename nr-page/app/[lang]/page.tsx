@@ -118,21 +118,22 @@ export default async function Home({ params: { lang } }: Props) {
     {/* --------------------------------------------------- SKILLS ---------------------------------------------------*/}
       <div id='skills' className={`h-[110vh] w-[90vw] md:w-[80vw] xl:w-[60vw] md:mb-80 flex`}>
         <div className='grid gap-2 m-auto'>
+          <h2 className="text-4xl xl:text-[5em] font-extrabold tracking-[.25em] xl:tracking-[1.5em] 2xl:text-center 2xl:ml-20 py-10">SKILLS</h2>
           <div className='grid xl:grid-cols-4 gap-10 w-[80vw] xl:w-[60vw] h-[700px] xl:h-[600px] rounded-md'>
               <div className="h-full xl:col-span-2 ">
+                  <div className="h-[16rem] xl:h-[40rem] bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
+                    qweq
+
+                  </div>
                   <div className="h-20 w-full flex">
                     <h2 className=" text-[1.9em] text-center m-auto">
                       Frontend
                     </h2>
                   </div>
-                  <div className="h-[16rem] xl:h-[40rem] bg-white rounded-md">
-                    qweq
-
-                  </div>
               </div>
               <div className="h-full xl:col-span-2 grid grid-cols-2 grid-rows-2 gap-4">
-                <div className=" col-span-1 row-span-1">
-                    <div className="h-20 xl:h-80 bg-white rounded-md">
+                {/* <div className=" col-span-1 row-span-1">
+                    <div className="h-20 xl:h-80 bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
                       qweq
 
                     </div>
@@ -148,19 +149,30 @@ export default async function Home({ params: { lang } }: Props) {
                         Servers and Cloud
                       </h2>
                     </div>
-                    <div className="h-20 xl:h-80 bg-white rounded-md">
+                    <div className="h-20 xl:h-80 bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
                       qweq
 
                     </div>
-                </div>
+                </div> */}
                 <div className=" col-span-2 xl:col-span-2 row-span-2">
-                    <div className="h-20 xl:h-80 bg-white rounded-md">
+                    <div className="h-20 xl:h-80 bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
                       qweq
 
                     </div>
                     <div className="h-20 w-full flex">
                       <h2 className=" text-[1.9em] text-center m-auto">
-                        Other Skills
+                        Backend
+                      </h2>
+                    </div>
+                </div>
+                <div className=" col-span-2 xl:col-span-2 row-span-2">
+                    <div className="h-20 xl:h-80 bg-gradient-to-b from-[#081a25] to-transparent rounded-md">
+                      qweq
+
+                    </div>
+                    <div className="h-20 w-full flex">
+                      <h2 className=" text-[1.9em] text-center m-auto">
+                        Servers and Cloud
                       </h2>
                     </div>
                 </div>
@@ -176,7 +188,7 @@ export default async function Home({ params: { lang } }: Props) {
       <div id='experience' className={`h-[100vh] w-[100vw] md:w-[80vw] xl:w-[60vw] mb-20 xl:flex  `}>
         <h2 className=" p-5 text-5xl xl:hidden">EXPERIENCE</h2>
         <h2 className=" px-5 xl:text-5xl 2xl:text-6xl vertical-text hidden xl:block">EXPERIENCE</h2>
-        <div className='relative h-[80vh] overflow-y-auto border-[20px] border-double'>
+        <div className='relative h-[80vh] overflow-y-auto border-[20px] border-double m-4'>
           <WorkPositionComponent experience={intl.experience}/>
           <hr/>
           <WorkPositionComponent experience={intl.experience}/>
@@ -214,7 +226,7 @@ export default async function Home({ params: { lang } }: Props) {
               alt="me"
               width={500}
               height={500}
-              className=" h-[400px] object-cover rounded-lg xl:shadowed-me bg-white"
+              className=" w-[300px] 2xl:w-[400px] object-cover rounded-lg xl:shadowed-me bg-white"
             />
             
             {/* <div className=" w-[100%] h-[400px] rounded-lg bg-[#8b8b8b62] absolute -z-10 -top-4 -right-4">
