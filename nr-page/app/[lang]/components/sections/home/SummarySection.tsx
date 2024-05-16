@@ -9,14 +9,15 @@ import 'aos/dist/aos.css';
 import ecuador from "@/public/assets/img/banderaecuador.svg"
 import externallink from "@/public/assets/img/externallinksvgrepo.svg"
 
-import awslogo from "../../../public/assets/img/brand certifications/aws.png"
-import freecodecamplogo from "../../../public/assets/img/brand certifications/freecodecamp.png"
-import georgitechlogo from "../../../public/assets/img/brand certifications/georgiainstitute.png"
-import googlelogo from "../../../public/assets/img/brand certifications/google.png"
-import hardvardlogo from "../../../public/assets/img/brand certifications/hardvard.png"
-import metalogo from "../../../public/assets/img/brand certifications/meta.png"
-import ucdavislogo from "../../../public/assets/img/brand certifications/ucdavis.png"
-import { SlideVirtual } from './SlideVirtual';
+import awslogo from "../../../../../public/assets/img/brand certifications/aws.png"
+import freecodecamplogo from "../../../../../public/assets/img/brand certifications/freecodecamp.png"
+import georgitechlogo from "../../../../../public/assets/img/brand certifications/georgiainstitute.png"
+import googlelogo from "../../../../../public/assets/img/brand certifications/google.png"
+import hardvardlogo from "../../../../../public/assets/img/brand certifications/hardvard.png"
+import metalogo from "../../../../../public/assets/img/brand certifications/meta.png"
+import ucdavislogo from "../../../../../public/assets/img/brand certifications/ucdavis.png"
+import { SlideVirtual } from '../../SlideVirtual';
+import ToolTip from '../../ToolTip';
 
 
 const brandCertifications = [
@@ -61,10 +62,6 @@ export const SummarySection = (props : {summary:any}) => {
     ]
 
 
-    
-    
-    
-    props.summary.angularrouting
 
 
 
@@ -147,17 +144,22 @@ export const SummarySection = (props : {summary:any}) => {
                         {
                             COURSES_AND_CERTIFICATIONS.map((item,index)=>{
                                 return(
-                                    <Link 
-                                        data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-offset="0"
-                                        key={`item-course-certification-${index}`} target="_blank" href={item.url} 
-                                        className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-md text-black bg-white rounded-md 
-                                        hover:translate-x-2 hover:bg-slate-300 border-2 border-slate-500">
-                                        <h3>
-                                            {item.name}
-                                        </h3>
-                                        <Image className="" src={externallink}  alt={props.summary.university} 
-                                        width={20} height={20}/>
-                                    </Link>
+                                    <div key={`item-course-certification-${index}`}>
+                                        <ToolTip text='holi'>
+                                            <Link 
+                                                data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600" data-aos-offset="0" 
+                                                target="_blank" href={item.url} 
+                                                className="flex gap-2 transition-all duration-500 ease-out px-4 py-2 shadow-md text-black bg-white rounded-md 
+                                                hover:translate-x-2 hover:bg-slate-300 border-2 border-slate-500">
+                                                <h3>
+                                                    {item.name}
+                                                </h3>
+                                                <Image className="" src={externallink}  alt={props.summary.university} 
+                                                width={20} height={20}/>
+                                            </Link>
+                                        </ToolTip>
+                                    </div>
+
                                 )
                             })
                         }

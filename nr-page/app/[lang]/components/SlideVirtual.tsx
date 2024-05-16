@@ -4,9 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/virtual';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import ToolTip from './ToolTip';
 
-export const SlideVirtual = (props:{imagesStack: Array<string>}) => {
+export const SlideVirtual = (props:{imagesStack: Array<StaticImageData>}) => {
   
   // Create array with 1000 slides
   const slides = Array.from({ length: 10 }).map(
@@ -48,17 +49,17 @@ export const SlideVirtual = (props:{imagesStack: Array<string>}) => {
           </div>
         </SwiperSlide>
       ))} */}
-      {props.imagesStack.map((slideContent, index) => (
-        <div className='swiper-wrapper'>
-          <SwiperSlide className='swiper-slide' key={`slide-${index}`} virtualIndex={index}>
-            <div className=' max-h-32 h-32 w-28 flex justify-center'>
-              <div className='m-auto text-center bg-white'>
-                <Image src={slideContent} alt={`slide-${index}-img`} className='w-32'/>
-              </div>
-            </div>
-          </SwiperSlide>
-        </div>
-      ))}
+      <div className='swiper-wrapper'>
+        {props.imagesStack.map((slideContent, index) => (
+            <SwiperSlide className='swiper-slide' key={`slide-${index}`} virtualIndex={index}>
+                <div className=' max-h-32 h-32 w-28 flex justify-center'>
+                  <div className='m-auto text-center bg-white'>
+                    <Image src={slideContent} alt={`slide-${index}-img`} className='w-32'/>
+                  </div>
+                </div>
+            </SwiperSlide>
+        ))}
+      </div>
     </Swiper>
   );
 };

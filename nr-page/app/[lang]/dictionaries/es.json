@@ -58,6 +58,12 @@
             "angularrouting":"Enrutamiento en Angular",
             "viewall":"Ver todas"
         }
-    ]
+    ],
+    "skills":{
+        
+    },
+    "about":{
+        
+    }
 
 }

@@ -208,3 +208,70 @@ body {
   text-orientation: upright; /* upright text */
   white-space: nowrap; /* prevents text from wrapping */
 }
+
+
+/*tool tip*/
+.tool-tip{
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+
+
+  box-shadow: 0 0 10px #000;
+  font-size: .8rem;
+  border-radius: 10px;
+
+  top: 90%;
+  left: 10%;
+
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+:has(> .tool-tip){
+  position: relative;
+}
+
+:has(> .tool-tip):hover .tool-tip{
+  opacity: 1;
+
+}
+
+/*LOADING Delay*/
+.container-pulser{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.pulser-circle{
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: animationPulse 2s ease infinite;
+}
+@keyframes animationPulse {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.pulser-circle:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.pulser-circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.pulser-circle:nth-child(3) {
+  animation-delay: 0.5s;
+}
