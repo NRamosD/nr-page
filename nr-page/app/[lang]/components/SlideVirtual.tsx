@@ -23,7 +23,7 @@ export const SlideVirtual = (props:{imagesStack: Array<StaticImageData>}) => {
   return (
     <Swiper className='swiper-container' modules={[Autoplay, Virtual, FreeMode]} 
         slidesPerView={3}
-        spaceBetween={0}  
+        spaceBetween={5}  
         virtual={true}
         freeMode={true}
         loop = {true}
