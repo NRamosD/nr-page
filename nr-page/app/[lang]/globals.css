@@ -241,13 +241,13 @@ body {
 /*LOADING Delay*/
 .container-pulser{
   display: flex;
-  gap: 15px;
+  gap: 6px;
   justify-content: center;
   align-items: center;
 }
 .pulser-circle{
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background: white;
   border-radius: 50%;
   opacity: 0;
