@@ -10,11 +10,11 @@ import ecuador from "@/public/assets/img/banderaecuador.svg"
 import externallink from "@/public/assets/img/externallinksvgrepo.svg"
 
 import awslogo from "../../../../../public/assets/img/brand certifications/aws.png"
-import freecodecamplogo from "../../../../../public/assets/img/brand certifications/freecodecamp.png"
+import freecodecamplogo from "../../../../../public/assets/img/brand certifications/freecodecamp.webp"
 import georgitechlogo from "../../../../../public/assets/img/brand certifications/georgiainstitute.png"
 import googlelogo from "../../../../../public/assets/img/brand certifications/google.png"
-import hardvardlogo from "../../../../../public/assets/img/brand certifications/hardvard.png"
-import metalogo from "../../../../../public/assets/img/brand certifications/meta.png"
+import hardvardlogo from "../../../../../public/assets/img/brand certifications/hardvard.webp"
+import metalogo from "../../../../../public/assets/img/brand certifications/meta.webp"
 import ucdavislogo from "../../../../../public/assets/img/brand certifications/ucdavis.png"
 import { SlideVirtual } from '../../SlideVirtual';
 import ToolTip from '../../ToolTip';

@@ -27,12 +27,12 @@ export const StartSection = (props : {landing:any}) => {
         <>
             <div className=' my-auto '>
               <div className={`transition-all px-2 duration-500 -space-y-10 ${myName?"translate-y-0 opacity-1":"translate-y-20 opacity-0"}`}>
-                <span className='text-[50px] p-0'>{props.landing.im}</span>
+                {/* <span className='text-[50px] p-0'>{props.landing.im}</span> */}
                 <h1 className='text-[100px] p-0 uppercase text-shadow-landing'>{props.landing.name}</h1>
                 <h2 className='text-[20px] p-0 uppercase text-yellow-400'>{props.landing.profession}</h2>
               </div>
               <div className="">
-                <h3 className='text-[60px] uppercase'>{`${props.landing.welcome.split("!")[0]}!`}</h3>
+                {/* <h3 className='text-[60px] uppercase'>{`${props.landing.welcome.split("!")[0]}!`}</h3> */}
                 <div className="flex">
                   <Image src={laptoppixel} alt="cat pixel" width={70} height={70} className=" pt-10"/>
                   <Image src={catpixel} alt="cat pixel" width={100} height={60} className="mb-2"/>
