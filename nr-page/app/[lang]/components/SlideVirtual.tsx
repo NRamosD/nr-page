@@ -23,7 +23,7 @@ export const SlideVirtual = (props:{imagesStack: Array<StaticImageData>}) => {
   return (
     <Swiper className='swiper-container' modules={[Autoplay, Virtual, FreeMode]} 
         slidesPerView={3}
-        spaceBetween={5}  
+        spaceBetween={1}  
         virtual={true}
         freeMode={true}
         loop = {true}
@@ -52,9 +52,9 @@ export const SlideVirtual = (props:{imagesStack: Array<StaticImageData>}) => {
       <div className='swiper-wrapper'>
         {props.imagesStack.map((slideContent, index) => (
             <SwiperSlide className='swiper-slide' key={`slide-${index}`} virtualIndex={index}>
-                <div className=' max-h-32 h-32 w-28 flex justify-center'>
-                  <div className='m-auto text-center bg-white'>
-                    <Image src={slideContent} alt={`slide-${index}-img`} className='w-32'/>
+                <div className=' max-h-32 h-32 w-28 flex justify-center '>
+                  <div className='m-auto text-center bg-white rounded-md shadow-md shadow-black '>
+                    <Image src={slideContent} alt={`slide-${index}-img`} className='w-32 rounded-md border-2'/>
                   </div>
                 </div>
             </SwiperSlide>
