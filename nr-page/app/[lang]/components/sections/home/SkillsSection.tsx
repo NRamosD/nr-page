@@ -58,7 +58,7 @@ export const SkillsSection = (props : {skills:any}) => {
     return(
         <>
             <div className='grid gap-2 m-auto'>
-            <h2 className="text-4xl xl:text-[5em] font-extrabold tracking-[.25em] xl:tracking-[1.5em] 2xl:text-center 2xl:ml-20 py-10">SKILLS</h2>
+            <h2 className="text-4xl xl:text-[5em] font-extrabold tracking-[.25em] xl:tracking-[1.5em] 2xl:text-center 2xl:ml-20 py-10 gayathri-regular">SKILLS</h2>
             <div className='grid xl:grid-cols-4 gap-10 w-[80vw] xl:w-[60vw] h-[700px] xl:h-[600px] rounded-md'>
                 <div className="h-full xl:col-span-2 ">
                     <div className="h-[16rem] xl:h-[40rem] bg-gradient-to-b from-[#081a25] to-transparent rounded-md grid grid-rows-2">

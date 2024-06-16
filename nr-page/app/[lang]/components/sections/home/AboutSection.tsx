@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 
 import ToolTip from '../../ToolTip';
 import { WorkPositionComponent } from '../../WorkPositionComponent';
-
+import testImage from "@/public/assets/img/palmbeach.jpg"
 
 
 export const AboutSection = (props : {about:any}) => {
@@ -46,27 +46,53 @@ export const AboutSection = (props : {about:any}) => {
     
     return(
         <>
-            <div className='h-full grid grid-cols-10 gap-5 md:gap-10'>
-            <div className='w-full col-span-10 md:col-span-6 align-text-bottom relative'>
-                <div className=" md:absolute bottom-0">
-                <h2 className="text-5xl my-4 text-shadow-landing">And about me...</h2>
-                <div className=" rounded-md p-4">
-                    <p className="text-base md:text-xl text-white ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend tempor viverra. Fusce molestie mauris id elit bibendum, dapibus luctus ipsum tristique. Pellentesque tristique dapibus turpis sit amet porttitor. Nam et volutpat lorem. Curabitur pellentesque sollicitudin odio, eu ultrices tortor porta sit amet.
-                    </p>
-                </div>
+            <div className='h-full'>
+                <div className='grid relative grid-cols-10 gap-5 md:gap-10 pl-20'>
+                    <div className='w-full col-span-10 md:col-span-6 align-text-bottom relative'>
+                        <div className=" md:absolute bottom-32">
+                            <h2 className="playwrite-cursive text-5xl my-4 text-shadow-landing">And about me...</h2>
+                            <div className="p-4">
+                                <p className="playwrite-moderne text-white space-text text-lg">
+                                    All my life, the world of technology has been one of my passions, and fortunately, it has become my way of life through coding. I have to admit that I didn't discover this passion until university, when I realized that I would love it. Since then, I have been coding continuously and learning everything I can to help solve problems that arise while I try to transform ideas into reality and make life a little easier.
+                                </p>
+                            </div>
+                            <div className=''>
+                                <h3 className=' py-5 playwrite-cursive'>Some of my hobbies</h3>
+                                <div className='flex playwrite-moderne'>
+                                    <span className='py-1 px-4 mx-2 w-auto bg-white shadow-md text-black rounded-3xl'>
+                                        <p>Soccer</p>
+                                    </span>
+                                    <span className='py-1 px-4 mx-2 w-auto bg-white shadow-md text-black rounded-3xl'>
+                                        <p>Soccer</p>
+                                    </span>
+                                    <span className='py-1 px-4 mx-2 w-auto bg-white shadow-md text-black rounded-3xl'>
+                                        <p>Soccer</p>
+                                    </span>
+                                    <span className='py-1 px-4 mx-2 w-auto bg-white shadow-md text-black rounded-3xl'>
+                                        <p>Soccer</p>
+                                    </span>
+                                    <span className='py-1 px-4 mx-2 w-auto bg-white shadow-md text-black rounded-3xl'>
+                                        <p>Soccer</p>
+                                    </span>
+                                    <span className='py-1 px-4 mx-2 w-auto bg-white shadow-md text-black rounded-3xl'>
+                                        <p>Soccer</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className='h-[100vh] w-full col-span-10 md:col-span-4 m-auto relative'>
+                        <Image 
+                        src={testImage}
+                        alt="me"
+                        width={500}
+                        height={500}
+                        className=" h-full w-full object-cover object-center bg-white p-10 shadow-lg shadow-black  "
+                        />
+                    </div>
                 </div>
             </div>
-            <div className='h-fit w-fit col-span-10 md:col-span-4 m-auto relative'>
-                <Image 
-                src={""}
-                alt="me"
-                width={500}
-                height={500}
-                className=" w-[300px] 2xl:w-[400px] object-cover rounded-lg xl:shadowed-me bg-white"
-                />
-            </div>
-        </div>
         </>
     )
 }
