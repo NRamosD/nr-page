@@ -396,4 +396,10 @@ body {
 
 
 
+.scale-icons-contact svg{
+  transition: transform 0.3s ease-in-out;
+}
 
+.scale-icons-contact:hover svg{
+  transform: scale(1.2);
+}
